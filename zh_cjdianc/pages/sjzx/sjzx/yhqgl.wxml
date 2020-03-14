@@ -1,0 +1,31 @@
+<block wx:for="{{list}}" wx:key="this">
+	<view class="youhui">
+		<image src="../../../img/hyzx/yihq.png"></image>
+		<view class="ming" bindtap="dianija" data-id="{{item.id}}">
+			<view class="toumin">
+				<view wx:if="{{item.category==1}}" class="awewed">(普通券)</view>
+				<view wx:if="{{item.category==2}}" class="aweweds">(异业券)</view>
+				<view class="mca">{{item.name}}</view>
+			</view>
+
+			<view class="sj">有效期:{{item.start_time}} - {{item.end_time}}</view>
+			<view class="sj">满{{item.full}}可用</view>
+		</view>
+		<view class="qian" bindtap="dianija" data-id="{{item.id}}">
+			<view class="qiaoxq">
+				<view class="fuua">￥</view>
+				<view class="jq">{{item.reduce}}</view>
+			</view>
+			<view class="{{item.instruction!=''?'bili':'bilis'}}" wx:if="{{item.commission>0||item.commission_td>0}}">{{item.commission==0?'实付返佣：':'优惠券返佣：'}}
+				{{item.commission==0?item.commission_td:item.commission}}{{item.commission==0?'%':'元'}}</view>
+		</view>
+		<view class="tishi">
+			<view class="xiaoti">
+				<view class="ts" wx:if="{{item.instruction!=''}}">温馨提示：</view>
+				<view class="tss" wx:if="{{item.instruction!=''}}">{{item.instruction}}</view>
+			</view>
+			<view bindtap="del" data-id="{{item.id}}" class="ling">删除</view>
+		</view>
+	</view>
+</block>
+<navigator class="tianjia" url="blyyq">添加优惠券</navigator>

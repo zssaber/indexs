@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "短信充值",
+  "usingComponents": {
+      "cardlist": "/zh_cjdianc/dist/cardlist/index"
+  }
+}

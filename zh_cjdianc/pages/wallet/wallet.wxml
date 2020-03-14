@@ -1,0 +1,56 @@
+<view class="wallet">
+  <view class="mywallet">
+    <view class="title">我的余额</view>
+    <view class="flex-bet mywallet_info">
+      <view class="flex-center">
+        <image class="wallet_img" src="../../img/yeqb.png"></image>
+        <view class="wallet_money">¥{{wallet}}</view>
+      </view>
+    </view>
+  </view>
+  <view bindtap="tradeinfo" class="list flex-bet">
+    <view class="flex-center trade">
+      <image class="listimg" src="../../img/gssj.png"></image>
+      <view class="">交易明细</view>
+    </view>
+    <image class="addright" src="../../img/blackjt.png"></image>
+  </view>
+  <view bindtap="cash" class="list flex-bet" wx:if="{{system.is_cz==1}}">
+    <view class="flex-center trade">
+      <image class="listimg" src="../../img/personal/chongzhi.png"></image>
+      <view class="">去充值</view>
+    </view>
+    <image class="addright" src="../../img/blackjt.png"></image>
+  </view>
+</view>
+<view class="zhongjuian" wx:for="{{storevip}}" wx:key="key">
+  <view class="sdhas">
+    <view class="yulielogs">
+      <image mode="aspectFill" src="{{item.logo}}"></image>
+    </view>
+    <view style="margin-top: 20rpx;">{{item.name}}</view>
+  </view>
+
+  <view class="yucon">
+    <view class="yulie" style="background-image:url('{{item.logo}}');background-size: cover;-moz-background-size:100% 100%;  background-repeat:no-repeat;">
+      <view class="yuliel">
+        <view class="yulielog">
+          <image mode="aspectFill" src="{{item.logo}}"></image>
+        </view>
+        <view class="yulielmz">
+          <view>{{item.name}}</view>
+          <navigator url="/zh_cjdianc/pages/wallet/jiayiminxi?store_id={{item.store_id}}">
+            <view class="chaan">查看详情</view>
+          </navigator>
+        </view>
+
+      </view>
+      <view class="yulir">
+        <view class="yulirje">￥{{item.money}}</view>
+        <navigator url="/zh_cjdianc/pages/wallet/storecz?storeid={{item.store_id}}">
+          <view class="yulirjx">去充值>></view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+
+  <rich-text nodes="{{rules}}"></rich-text>
+  <view wx:if="{{!rule}}">
+    <view class="guize">
+      <view class="santop">
+        <view class='santopx'></view>
+        <view class="santopZ">
+          <view class="xiafu">
+            <text>支付</text>
+            <text> 开团/参团</text>
+          </view>
+          <view class="xiafu">
+            <text>邀请</text>
+            <text>好友参团</text>
+          </view>
+          <view class="xiafu">
+            <text> 到达人数，拼团成功逾期未成团自动退款</text>
+          </view>
+        </view>
+        <view class='yuana'>
+          <text>1</text>
+        </view>
+        <view class='yuanb'>
+          <text>2</text>
+        </view>
+        <view class='yuanc'>
+          <text>3</text>
+        </view>
+      </view>
+    </view>
+    <view class="biaoti">参团的基本流程</view>
+    <view class="neirong">支付成功即可开团/参团——邀请好友参团——拼团成功立即享用逾期未成团自动退款</view>
+    <view class="biaoti">商品有效时间</view>
+    <view class="neirong">可拼团的商品都带有“拼团”标识，具体拼团有效期以页面倒计时为准；在有效期内，您可以开团或参团</view>
+    <view class="biaoti">拼团限制</view>
+    <view class="neirong">同一个商品，每个账号的限购数量以此商品的拼团要求为准</view>
+    <view class="biaoti">拼团失败</view>
+    <view class="neirong">商品有效拼团时间结束后，若团未达到要求人数，系统自动为您退款，若商品库存售罄，售罄前未成团的订单，系统自动为您退款</view>
+    <view class="biaoti">关于取消拼团</view>
+    <view class="neirong">在商品拼团有效期内，如果有人参团，团长不能取消订单，团员任何时候都有权取消订单；，团员取消订单后，该团可继续招募成员直到拼团成功，若除团长外无人参与，团长有权取消订单；在有团员进入后，团长则不可取消订单，在成团之前，团员有权取消订单商品拼团成功后，为保障所有参团成员利益，团队成员均无权取消订单</view>
+    <view class="biaoti">查看订单</view>
+    <view class="neirong">支付成功后，您可以直接进入“我的”“我的拼团”中查看具体拼团详情并进行相关操作</view>
+  </view>

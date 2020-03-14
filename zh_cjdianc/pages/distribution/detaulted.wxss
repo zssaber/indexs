@@ -1,0 +1,10 @@
+@import "detault.wxss";
+.xiaozas {
+  display: flex;
+}
+
+.ima{
+  height: 50rpx;
+  width: 50rpx;
+  border-radius: 50%;
+}

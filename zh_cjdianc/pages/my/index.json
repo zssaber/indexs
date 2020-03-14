@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "个人中心",
+    "navigationBarBackgroundColor": "#FF7D5C",
+      "navigationBarTextStyle": "white",
+    "usingComponents": {
+        "cardlist": "/zh_cjdianc/dist/cardlist/index"
+    }
+    
+}

@@ -1,0 +1,43 @@
+<view class="head">
+    <image mode="aspectFill" src="{{url}}{{fxset.img}}"></image>
+</view>
+<view class="body">
+    <button style="background:{{color}}" wx:if="{{isfxs=='1'}}">等待审核</button>
+    <button openType="share" style="background:{{color}}" wx:if="{{isfxs=='2'}}">立即邀请</button>
+    <button bindtap="se_code" class="color_6" style="color:{{color}};border:2rpx solid {{color}}" wx:if="{{isfxs=='2'||storeid>0}}">我的{{fxset.fx_name}}</button>
+    <button bindtap="ljsq" style="background:{{color}};color: #fff; border：none" wx:if="{{isfxs=='3'&&storeid==0}}">申请成为推广员</button>
+    <button bindtap="ljsq" style="background:{{color}};color: #fff;border：none" wx:if="{{isfxs=='3'&&storeid>0}}">申请成为推广员</button>
+</view>
+<view class="footer1">
+    <view class="t_c pa_00">
+        <view>
+            <text class="fon_50 wei">{{fxdata.djsyj}}</text>
+            <text class="fon_24">元</text>
+        </view>
+        <view class="fon_28 color_6 pa_00">红包在路上</view>
+    </view>
+    <view class="t_c pa_00">
+        <view>
+            <text class="fon_50 wei">{{fxdata.ljyj}}</text>
+            <text class="fon_24">元</text>
+        </view>
+        <view class="fon_28 color_6 pa_00">累计获得</view>
+    </view>
+    <view class="t_c pa_00">
+        <view>
+            <text class="fon_50 wei">{{fxdata.rs}}</text>
+            <text class="fon_24">人</text>
+        </view>
+        <view class="fon_28 color_6 pa_00">成功邀请</view>
+    </view>
+</view>
+<view class="rule mar_t ba_f pa">
+    <view class="t_c fon_30">活动规则</view>
+    <view class="fon_28 color_6 pa_00">
+        <rich-text nodes="{{fxset.instructions}}"></rich-text>
+    </view>
+</view>
+<view class="sele_fixed" hidden="{{select_code}}">
+    <view bindtap="se_code" class="ab"></view>
+    <view class="ab udlr"></view>
+</view>

@@ -1,0 +1,75 @@
+<view wx:if="{{yyyhq[0].coupon_name}}">
+	<!-- <block wx:for="{{yyyhq}}" wx:key="this">
+		<view class="youhui" bindtap="{{item.state==2?'ljlq':'lqlj'}}" data-index="{{index}}" data-qid="{{item.ucid}}" wx:if="{{myid!=yyid}}">
+			<image src="../../../img/hyzx/yihq.png"></image>
+			<view class="ming" bindtap="dianija"  data-storeid="{{item.store_id}}">
+				<view class="sj">{{item.store_name}}</view>
+				<view class="mca">{{item.coupon_name}}</view>
+				<view class="sj">有效期:{{item.start_time}} - {{item.end_time}}</view>
+			</view>
+			<view class="qian">
+				<view class="fuua">￥</view>
+				<view class="jq">{{item.reduce}}</view>
+			</view>
+			<view class="tishi">
+				<view class="xiaoti">
+					<view class="ts">温馨提示：</view>
+					<view class="ts">{{item.instruction}}</view>
+				</view>
+				<view class="ling">{{item.state==2?'领取':'已领取'}}</view>
+			</view>
+		</view>
+
+		<view class="youhui" wx:if="{{myid==yyid}}">
+			<image src="../../../img/hyzx/yihq.png"></image>
+			<view class="ming" bindtap="dianija"  data-storeid="{{item.store_id}}">
+				<view class="sj">{{item.store_name}}</view>
+				<view class="mca">{{item.coupon_name}}</view>
+				<view class="sj">有效期:{{item.start_time}} - {{item.end_time}}</view>
+			</view>
+			<view class="qian">
+				<view class="fuua">￥</view>
+				<view class="jq">{{item.reduce}}</view>
+			</view>
+			<view class="tishi">
+				<view class="xiaoti">
+					<view class="ts">温馨提示：</view>
+					<view class="ts">{{item.instruction}}</view>
+				</view>
+				<button data-qid="{{item.ucid}}" open-type="share" class="butt">分享</button>
+			</view>
+		</view>
+	</block> -->
+	<block wx:for="{{yyyhq}}" wx:key="this">
+	<view class="sjhb">
+		<view class="sjhbtop flex-row flex-y-center" bindtap="dianija" data-storeid="{{item.store_id}}">
+			<view class="mdlogo flex-row flex-y-center">
+				<image src="{{item.logo}}"></image>
+			</view>
+			<view class="flex-grow-1 flex-col">
+				<view class=" flex-grow-1 mca">{{item.coupon_name}}</view>
+				<view class="flex-grow-1 yhname">{{item.store_name}}</view>
+				<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='1'}}">店外可用</view>
+				<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='2'}}">堂食可用</view>
+				<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='3'}}">堂食店外</view>
+				<view class="flex-grow-1 yhtime">有效期至：{{item.end_time}} </view>
+			</view>
+			<view class="flex-grow-0 flex-col flex-y-center">
+				<view class="flex-grow-1 yhmoney">￥{{item.reduce}}</view>
+				<view class="flex-grow-1 yhtj">满{{item.full}}可用</view>
+				<view class="{{item.instruction!=''?'bili':'bilis'}}" wx:if="{{item.commission>0||item.commission_td>0}}">{{item.commission==0?'实付返佣：':'优惠券返佣：'}}
+					{{item.commission==0?item.commission_td:item.commission}}{{item.commission==0?'%':'元'}}</view>
+			</view>
+		</view>
+		<view class="sjhbbtm">
+			<view class="xiaoti">
+				<view class="ts" wx:if="{{item.instruction!=''}}">温馨提示：</view>
+				<view class="tss">{{item.instruction}}</view>
+			</view>
+			<view wx:if="{{myid!=yyid}}" class="{{item.state==2?'ling':'yiling'}}" bindtap="{{item.state==2?'ljlq':'lqlj'}}" data-index="{{index}}"	 data-qid="{{item.ucid}}">{{item.state==2?'领取':'已领取'}}</view>
+						<button wx:if="{{myid==yyid}}" data-qid="{{item.ucid}}" open-type="share" class="butt">分享</button>
+		</view>
+	</view>
+		</block>
+</view>
+<view wx:if="{{yyyhq==''}}" class="ahsghhh">暂无更多优惠券!</view>

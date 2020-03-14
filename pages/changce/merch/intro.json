@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "店铺简介",
+    "backgroundColor": "#ff9b35",
+    "navigationBarBackgroundColor": "#ff9b35",
+    "navigationBarTextStyle": "white",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": true
+}

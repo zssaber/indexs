@@ -1,0 +1,160 @@
+<form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+	<view class="head">
+		<!-- <view bindtap="chooseLogo" class="left">
+ 		<image class="img" mode="aspectFill" src="../../../img/hb.png"></image>
+ 	</view> -->
+		<view class="right">
+			<view class="weui-cell weui-cell_input">
+				<view class="weui-cell__hd">
+					<view class="weui-label">优惠券名称</view>
+				</view>
+				<view class="weui-cell__bd">
+					<input class="weui-inputa" name="name" placeholder="请输入优惠券名称" value="{{list.name}}"></input>
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_input">
+				<view class="weui-cell__hd">
+					<view class="weui-label">优惠券类型</view>
+				</view>
+				<view class="weui-cell__bd">
+					<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+						<view class="picker weui-cell__ft weui-cell__ft_in-access">
+							{{array[index]}}
+						</view>
+					</picker>
+					<input name="category" type="number" value="{{index}}" style="display:none"></input>
+				</view>
+			</view>
+			<view class="weui-cell weui-cell_input">
+				<view class="weui-cell__hd">
+					<view class="weui-label">佣金类型</view>
+				</view>
+				<view class="weui-cell__bd">
+					<picker bindchange="bindPickerChangess" value="{{indexss}}" range="{{arrayss}}">
+						<view class="picker weui-cell__ft weui-cell__ft_in-access">
+							{{arrayss[indexss]}}
+						</view>
+					</picker>
+				</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="heads">
+		<view class="leftss">
+			<view class="jine">
+				<view class="mincs">优惠条件金额</view>
+				<view class="shurus">
+					<input class="weui-input" name="full" placeholder-class="place-holder" placeholder="" value="{{list.full?list.full:full}}"></input>
+					<view class="yuan">元</view>
+				</view>
+			</view>
+			<view class="jine">
+				<view class="mincss">优惠金额</view>
+				<view class="shurus">
+					<input class="weui-input" name="reduce" placeholder-class="place-holder" placeholder="" value="{{list.reduce?list.reduce:reduce}}"></input>
+					<view class="yuan">元</view>
+				</view>
+			</view>
+
+		</view>
+		<view class="rights">
+			<view class="heada" wx:if="{{indexss==0}}">
+				<view class="mincass">固定佣金</view>
+				<view class="shuru">
+					<input class="weui-input" name="commission" placeholder-class="place-holder" placeholder="" value="{{commission}}"></input>
+					<view class="yuan">元</view>
+				</view>
+			</view>
+			<view class="heada" wx:if="{{indexss==1}}">
+				<view class="mincass">提点佣金比</view>
+				<view class="shuru">
+					<input class="weui-input" name="commission_td" placeholder-class="place-holder" placeholder="" value="{{commission_td}}"></input>
+					<view class="yuan">%</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="heads">
+		<view class="heada">
+			<view class="lefts">
+				<view class="jine">
+					<view class="minc">优惠券数量</view>
+					<view class="shuru">
+						<input class="weui-input" name="number" placeholder-class="place-holder" placeholder="" value="{{list.number?list.number:number}}"></input>
+						<view class="yuan">张</view>
+					</view>
+				</view>
+			</view>
+			<view class="rights">
+				<view class="jine" wx:if="{{index==2}}">
+					<view class="minc">单次领取数量</view>
+					<view class="shuru">
+						<input class="weui-input" name="lq_num" placeholder-class="place-holder" placeholder="" value="{{list.lq_num?list.lq_num:lq_num}}"></input>
+						<view class="yuan">张</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="heada" wx:if="{{list}}">
+			<view class="leftss">
+				<view class="jine">
+					<view class="minc">优惠券剩余数量</view>
+					<view class="shuru">
+						<input class="weui-input" name="stock" placeholder-class="place-holder" placeholder="" value="{{stock}}"></input>
+						<view class="yuan">张</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="wenxin" wx:if="{{index==2}}">
+			<view class="asdas">
+				<view>温馨提示：</view>
+				<view>*单次领取数量为-1时，领取数量为无限制</view>
+			</view>
+		</view>
+		<view class="shijian">
+			<view class="jine">
+				<view class="minca">优惠券时间</view>
+				<view class="shuru">
+					<picker mode="date" value="{{timestart}}" end="" bindchange="bindDateChange1">
+						<view class="picker">
+							{{timestart}}
+						</view>
+					</picker>
+					<input class="weui-inputa" name="start_time" value="{{timestart}}" style="display:none"></input>
+					至
+					<picker mode="date" value="{{timeend}}" end="" bindchange="bindDateChange2">
+						<view class="picker">
+							{{timeend}}
+						</view>
+					</picker>
+					<input class="weui-inputa" name="end_time" value="{{timeend}}" style="display:none"></input>
+					<image class="ril" src="../../../img/ril.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="shijian">
+			<view class="jine">
+				<view class="minca">优惠范围</view>
+				<view class="cweuie">
+					<picker bindchange="bindPickerChanges" value="{{indexs}}" range="{{arrays}}" style="width:100%">
+						<view class="pickers weui-cell__ft weui-cell__ft_in-access">
+							{{arrays[indexs]}}
+						</view>
+					</picker>
+					<input name="type" type="number" value="{{indexs}}" style="display:none"></input>
+				</view>
+			</view>
+		</view>
+		<view class="shijian">
+			<view class="jine">
+				<view class="mincas">使用说明</view>
+				<textarea name="instruction" value="{{list.instruction}}" class="weui-textarea" placeholder="请填写使用说明" />
+				</view>
+ 	</view>
+ </view>
+ <view class="headaa">
+<button formType="submit" class="bttn">确认</button>
+</view>
+</form>

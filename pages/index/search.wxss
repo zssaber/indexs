@@ -1,0 +1,50 @@
+.title {
+  width: 100%;
+  height: 256rpx;
+  background: rgba(255, 155, 53, 1);
+  display: flex;
+  position: absolute;
+}
+
+.diqu {
+  color: white;
+  width: 22%;
+  height: 66rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.diqu text {
+  margin-top: 18rpx;
+  margin-left: 24rpx;
+  padding: 0rpx 10rpx;
+  font-size: 26rpx;
+}
+
+.diqu image {
+  width: 27rpx;
+  height: 15rpx;
+  margin-top: 28rpx;
+}
+
+.search_arr {
+  display: flex;
+  width: 67%;
+  height: 66rpx;
+  background-color: #f9ffff;
+  border-radius: 30px;
+
+  padding: 0rpx 30rpx;
+}
+
+.searchcion {
+  margin: 22rpx 10rpx 8rpx 1rpx;
+}
+
+.search_arr input {
+  width: 60%;
+  height: 66rpx;
+  line-height: 66rpx;
+  border-radius: 5px;
+  font-size: 26rpx;
+}

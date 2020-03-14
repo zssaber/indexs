@@ -1,0 +1,197 @@
+<form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+	<view class="container">
+		<view class="head" wx:if="{{ad.length>0}}">
+			<swiper autoplay="{{autoplay}}" duration="{{duration}}" indicatorDots="{{indicatorDots}}" interval="{{interval}}">
+				<swiper-item wx:for="{{ad}}">
+					<image class="slide-image" mode="aspectFill" src="{{item.logo}}"></image>
+				</swiper-item>
+			</swiper>
+		</view>
+		<view class="body">
+			<view class="text_list">
+				<view>商户名称</view>
+				<view>
+					<input name="name_title" placeholder="请输入店铺名称" value="{{name}}"></input>
+				</view>
+			</view>
+			<view class="text_lists">
+				<view>门店类型</view>
+				<picker bindchange="bindPickerChanges" data-id="{{type[index].id}}" range-key="{{'type_name'}}" range="{{type}}">
+					<view style="margin-left:58rpx;" class="{{type_id==0?'picker':'pickers'}}">
+						{{type_id==0?'请选择门店类型':type[index].type_name}}
+					</view>
+				</picker>
+				<input name="my_type" type="number" value="{{type_id}}" style="display:none"></input>
+			</view>
+			<view class="text_list">
+				<view>商户地址</view>
+				<view bindtap="choose_address">
+					<text wx:if="{{address==null}}">请选择商户地址</text>
+					<text wx:else>{{address}}</text>
+				</view>
+			</view>
+			<view class="text_list">
+				<view>简单介绍</view>
+				<view>
+					<textarea maxlength="100" name="name_prompt" placeholder="简单介绍下您的铺子" value="{{details}}"></textarea>
+				</view>
+			</view>
+			<view class="text_list">
+				<view>联系人</view>
+				<view>
+					<input name="name_wor" placeholder="您的姓名" value="{{link_name}}"></input>
+				</view>
+			</view>
+			<view class="text_list">
+				<view>联系方式</view>
+				<view>
+					<input bindinput="code" name="name_tel" placeholder="您的手机号" type="number" value="{{link_tel}}"></input>
+				</view>
+			</view>
+			<view class="text_list" wx:if="{{CheckSms.is_dxyz==1}}">
+				<view>验证码</view>
+				<view>
+					<input name="code" placeholder="请输入短信验证码" type="number"></input>
+					<view bindtap="sendmessg" class="code" wx:if="{{getmsg=='获取验证码'}}">{{getmsg}}</view>
+					<view class="code" style="color:#999;font-size:22rpx" wx:else>{{getmsg}}</view>
+				</view>
+			</view>
+			<view class="text_lists" wx:if="{{is_tgy==1}}" catchtap='selectTap'>
+				<view>选择绑定人</view>
+				<!-- <view style="margin-left: 30rpx;">{{adname}}</view> -->
+				<!-- <view class='select_box'>
+          <view class='option_box' style='height:{{selectShow?(MyTeam.one.length>5?325:MyTeam.one.length*50):0}}rpx;'>
+            <text class='option' wx:for='{{MyTeam.one}}' wx:key='this' data-index='{{item.fx_user}}' data-name='{{item.name}}' catchtap='optionTap'>{{item.name}}</text>
+          </view>
+        </view> -->
+				<picker bindchange="bindPickerChangesa" data-id="{{MyTeame[indexa].fx_user}}" range-key="{{'name'}}" range="{{MyTeam}}">
+					<view style="margin-left:58rpx;" class="{{id==0?'picker':'pickers'}}">
+						{{admin_id==0?'请选择绑定人':MyTeam[indexa].name}}
+					</view>
+				</picker>
+				<input name="admin_id" type="number" value="{{admin_id}}" style="display:none"></input>
+			</view>
+			<view class="upload_id">
+				<view>请上传商户logo</view>
+				<view>
+					<view bindtap="choose" data-type="1" wx:if="{{upload_one==null}}">
+						<image class="sele_img" mode="widthFix" src="../../img/logo.png"></image>
+						商户logo
+					</view>
+					<view bindtap="choose" data-type="1" wx:else>
+						<image class="prompt_img" mode="widthFix" src="{{bdupload_one}}"></image>
+					</view>
+				</view>
+			</view>
+			<view class="upload_id">
+				<view>请上传您的身份证正反面照片</view>
+				<view>
+					<view bindtap="choose" data-type="2" wx:if="{{upload_two==null}}">
+						<image class="sele_img" mode="widthFix" src="../../img/zhenmian@2x.png"></image>
+						身份证正面
+					</view>
+					<view bindtap="choose" data-type="2" wx:else>
+						<image class="prompt_img" mode="aspectFill" src="{{bdupload_two}}"></image>
+					</view>
+					<view bindtap="choose" data-type="3" wx:if="{{upload_three==null}}">
+						<image class="sele_img" mode="widthFix" src="../../img/fanmian@2x.png"></image>
+						身份证反面
+					</view>
+					<view bindtap="choose" data-type="3" wx:else>
+						<image class="prompt_img" mode="widthFix" src="{{bdupload_three}}"></image>
+					</view>
+				</view>
+			</view>
+			<view class="upload_id">
+				<view>请上传您的营业执照</view>
+				<view>
+					<view bindtap="choose" data-type="4" wx:if="{{upload_four==null}}">
+						<image class="sele_img" mode="widthFix" src="../../img/yingye@2x.png"></image>
+						营业执照
+					</view>
+					<view bindtap="choose" data-type="4" wx:else>
+						<image class="prompt_img" mode="widthFix" src="{{bdupload_four}}"></image>
+					</view>
+				</view>
+			</view>
+			<view class="ruzhu" wx:if="{{array==true}}" wx:for="{{arr}}">
+				<view>{{item.name}}</view>
+				<view>
+					<view bindtap="sele_arr" data-index="{{index}}" data-money="{{item.money}}" wx:if="{{day==null}}">
+						<text>服务周期{{item.days}}天</text>
+						<icon type="success" color="orange" wx:if="{{ac_index==index}}"></icon>
+						<icon type="success" color="#cccccc" wx:else></icon>
+						<text style="color:{{color}}">￥{{item.money}}</text>
+						<text>￥{{item.moneys}}</text>
+					</view>
+					<view wx:if="{{day!=null}}">
+						<text>服务周期{{day}}天</text>
+						<icon type="success"></icon>
+						<text></text>
+					</view>
+				</view>
+			</view>
+			<view class="formftyh">
+				<view class="weui-cellss weui-cells_after-title" wx:if="{{!haveQg}}">
+					<view bindtap="hbshowcart" class="weui-cella weui-cell_access" hoverClass="weui-cell_active">
+						<view class="weui-cell__hd">
+							<image mode="aspectFit" src="../../img/hb.png" style="margin-right: 15rpx;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
+						</view>
+						<view class="weui-cell__bd">红包</view>
+						<view class="weui-cell__ft weui-cell__ft_in-access" wx:if="{{hbarr.length==0}}">暂无红包</view>
+						<view class="weui-cell__ft_in-access" wx:if="{{hbarr.length>0&&hbkdje==0}}">选择红包</view>
+						<view class="weui-cell__ft_in-access" style="color:#FF7D5C" wx:if="{{hbarr.length>0&&hbkdje!=0}}">-￥{{hbkdje}}</view>
+					</view>
+				</view>
+				<view class="sfk flex-row flex-y-center">
+					<view class="sfk-fv flex-grow-0">实付款</view>
+					<view class="flex-grow-1 xiaoji">
+						<view style="color:#FF7D5C">已优惠￥{{totalyh}}</view>
+						<view>小计</view>
+						<view>￥{{money}}</view>
+					</view>
+				</view>
+			</view>
+			<view class="prompt">请仔细填写联系方式，保证我们能尽快联系到您</view>
+			<view class="protocol rel">
+				<icon bindtap="selse_succ" class="ab ud" color="{{color}}" type="success" wx:if="{{succ==true}}"></icon>
+				<icon bindtap="selse_succ" class="ab ud" color="#e5e5e5" type="success" wx:if="{{succ==false}}"></icon>
+				<text>我已阅读并了解</text>
+				<text bindtap="xieyi" style="color:{{color}}">【入驻申请协议】</text>
+			</view>
+			<button formType="submit" style="background:{{color}}">立即申请入驻</button>
+		</view>
+	</view>
+	<view catchtap="hbclosecart" class="share-modal {{hbshare_modal_active?'active':''}}">
+		<view class="share-modal-body">
+			<view class="yhqhead">选择红包</view>
+			<radio-group bindchange="hbradioChange" class="radio-group" name="hbradiogroup">
+				<scroll-view scrollY style="height: 400rpx;">
+					<label catchtap="{{hbactiveradio==item.id?'xzhbs':'xzhb'}}" data-full="{{item.full}}" data-kdje="{{item.reduce}}" data-rdid="{{item.id}}" data-type="红包" wx:for="{{hbarr}}" wx:key="key">
+						<view class="mdlist">
+							<view class="coupon-item unreceive" id="{{item.coupon_id}}">
+								<view class="item-left" style="background:#F65C5C">
+									<text class="num">{{item.reduce}}</text>
+									<text class="unit">元</text>
+								</view>
+								<view class="item-right">
+									<text class="name">{{item.name}}</text>
+									<text class="conditions" wx:if="{{item.full!='0.0'}}">满{{item.full}}可用</text>
+									<text class="conditions" wx:else>无门槛</text>
+									<text class="prefer">有效期至{{item.end_time}}</text>
+								</view>
+							</view>
+							<view class="radio">
+								<radio checked="{{hbactiveradio==item.id}}" color="{{color}}" disabled="{{gwcinfo.money<item.full}}" value="{{item.id}}"></radio>
+							</view>
+						</view>
+					</label>
+					<view class="kong" wx:if="{{hbarr.length==0}}">
+						<image src="../../img/wushuju.png"></image>
+						<view>暂无可用红包</view>
+					</view>
+				</scroll-view>
+			</radio-group>
+		</view>
+	</view>
+</form>

@@ -1,0 +1,33 @@
+<block wx:if="{{diyitem.id=='tabbar'}}">
+  <view class="fui-goods-group block" wx:if="{{(diyitem.type!='stores'||diyitem.type=='goods')&&diyitem.type!=''}}" style="margin-bottom: 120rpx;">
+    <view class="fui-goods-item" wx:for="{{diyitem.data[index].data}}" wx:key="key">
+      <navigator class="image {{diyitem.params.showicon=='1'?diyitem.style.iconstyle:''}}" data-id="{{childitem.gid}}" data-text="{{diyitem.style.goodsicon}}" url="/pages/goods/detail/index?id={{item.id}}">
+        <image class="salezs" mode="aspectFit" src="{{item.thumb}}" ></image>
+        <!-- <view class="goods-Commission" wx:if="{{item.cansee>0&&item.seecommission>0}}">{{item.seetitle}}￥{{item.seecommission}}</view> -->
+      </navigator>
+      <view class="detail">
+        <navigator class="name" style="color:{{diyitem.style.titlecolor}}" data-id="{{childitem.gid}}" url="/pages/goods/detail/index?id={{item.id}}">
+          <text>{{item.title}}</text>
+        </navigator>
+        <view class="price">
+          <text class="text" style="color:{{diyitem.style.pricecolor}}">￥{{item.minprice}}</text>
+          <text class="text" style="color:#999999;font-size:22rpx;  text-align: right;">销量{{(item.sales*1)+(item.salesreal*1)}}件</text>
+        </view>
+        <view class="{{users.store_id>0&&item.seecommission>0?'priceas':'priceass'}}">
+          <!-- <image class="fx" bindtap="showshade" src="/zh_cjdianc/img/hyzx/fx.png"></image> -->
+          <view class="yuji" wx:if="{{users.store_id>0&&item.seecommission>0}}">预计赚￥{{item.seecommission}}</view>
+          <navigator class="goumia" url="/pages/goods/detail/index?id={{item.id}}">
+            <text bindtap="selectPicker" class="" data-buytype="buy" data-id="{{childitem.gid}}">立即购买</text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="fui-tabbar-content" wx:elif="{{diyitem.type=='stores'}}">
+    <navigator class="tabbar-list" openType="navigate" url="/pages/order/store/map?id={{item.id}}" wx:for="{{diyitem.data[index].data}}" wx:key="key">
+      <text>{{item.storename}}</text>
+      <i class="icox icox-dingwei1"></i>
+    </navigator>
+  </view>
+
+</block>

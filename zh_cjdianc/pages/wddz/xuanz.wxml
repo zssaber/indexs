@@ -1,0 +1,50 @@
+<view class="heads">
+  <form class="foom" bindsubmit='formSubmit'>
+    <view class='label'>
+      <view class='label-i'>{{city}}</view>
+      <view class="shu">|</view>
+      <view class="shuru">
+        <image src='../../img/search.png' mode='widthFix' />
+        <input value='{{inputVal}}' bindinput="keywordTyping" name="site" placeholder-class="placeholder-class" placeholder='小区、写字楼、学校 等' />
+      </view>
+    </view>
+  </form>
+  <view class="youbian" bindtap="tiaoyue">
+    <image src="../../img/shezhi.png"></image>
+    <text>管理</text>
+  </view>
+</view>
+<view class="header">当前地址</view>
+<view class="current">
+  <view bindtap="addressTapped" data-title="{{item.title}}" data-location="{{item.location}}" wx:key="key">{{address}}</view>
+  <view class="dingwe" bindtap="reloadCurrent">
+    <image src="../../img/dingwei.png" /> 重新定位
+  </view>
+</view>
+<view class="yinc" wx:if="{{keywords!=''}}">
+  <view class="list">
+    <view class="item" bindtap="addressTapped" data-title="{{item.title}}" data-location="{{item.location}}" wx:for="{{result}}" wx:key="key">
+      <text class="title">{{item.title}}</text>
+      <text class="address">{{item.address}}</text>
+    </view>
+  </view>
+</view>
+<view wx:if="{{keywords==''}}">
+  <view class=" header ">收货地址</view>
+  <view class="address-list">
+    <view style="margin-bottom: 32rpx">
+      <view style="color: #888;text-align: center;padding: 32rpx 0;" wx:if="{{address_list.length==0}}">暂无收货地址</view>
+      <view class="radio-group" wx:else>
+        <view bindtap="radioChange" data-title="{{item.addresse}}" data-id="{{item.id}}"  data-lat="{{item.lat}}" data-lng="{{item.lng}}" wx:for="{{address_list}}" wx:key="key">
+          <view class="address-item" data-index="{{index}}">
+            <view class="userinfo flex-row">
+              <view class="flex-grow-1">收货人：{{item.user_name}}</view>
+              <view class="flex-grow-0">{{item.tel}}</view>
+            </view>
+            <view class="address-detail">收货地址：{{item.address}} {{item.mph}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

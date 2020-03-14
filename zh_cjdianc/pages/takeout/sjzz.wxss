@@ -1,0 +1,22 @@
+.zjzz{
+  width: 100%;
+  background: white;
+  padding: 20rpx;
+}
+.xztpul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  background: white;
+  font-size: 24rpx;
+}
+.scimg {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 15rpx;
+  margin-top: 20rpx;
+  border-radius: 6px;
+}

@@ -1,0 +1,69 @@
+<view class="xuanlei">
+  <navigator class="tiao" url="/pages/groups/index/index">
+    <view class="pintuan">
+      <image mode="widthFix" src="/images/pintuan.png"></image>
+      <view class="biaoti">
+        <text class="tou1">每日拼团</text>
+        <text class="tou2">拼团购物更加实惠</text>
+      </view>
+    </view>
+  </navigator>
+  <navigator class="tiao" url="/pages/creditshop/index">
+    <view class="pintuan">
+      <image mode="widthFix" src="/images/jifen.png"></image>
+      <view class="biaoti">
+        <text class="tou1">积分商城</text>
+        <text class="tou2">超值好物等你兑换</text>
+      </view>
+    </view>
+  </navigator>
+</view>
+
+
+
+<view class="seckill-group" wx:if="{{diyitem.data}}">
+  <navigator url="/seckill/pages/index/index">
+    <view class="seckill-title">
+      <view class="seckill-text">
+        <image src="{{diyitem.params.iconurl}}"></image>
+        <span class="title" style="color:{{diyitem.style.titlecolor}};">{{diyitem.data.time}}点场 {{diyitem.data.status==1?'距开始':'距结束'}}</span>
+        <view class="killtime" style="color: #ffffff;">
+          <span class="item" style="background:{{diyitem.style.titlecolor}};border:1px solid ">{{hour}}</span>
+          <d style="color:{{diyitem.style.productpricecolor}}">:</d>
+          <span class="item" style="background:{{diyitem.style.titlecolor}};border:1px solid ">{{min}}</span>
+          <d style="color:{{diyitem.style.productpricecolor}}">:</d>
+          <span class="item" style="background:{{diyitem.style.titlecolor}};border:1px solid ">{{sec}}</span>
+        </view>
+      </view>
+      <view class="seckill-remark" style="color:{{diyitem.style.titlecolor}};">
+        <span>更多</span>
+        <icon class="icox icox-qianjin-copy"></icon>
+      </view>
+    </view>
+    <scroll-view scrollX style="width: 100%">
+      <view class="seckill-goods">
+        <view class="item" wx:for="{{diyitem.data.goods}}" wx:key="key" wx:for-item="goods_item">
+          <view class="thumb">
+            <image src="{{goods_item.thumb}}"></image>
+          </view>
+          <view class="marketprice" style="color:{{diyitem.style.marketpricecolor}};">￥{{goods_item.price}}</view>
+
+        </view>
+      </view>
+    </scroll-view>
+  </navigator>
+</view>
+
+
+<view class="xianshia" wx:if="{{disp==0}}">
+  <view class="shu"></view>
+  严选商家
+</view>
+<scroll-view class="categories" scroll-x="true" wx:if="{{disp==0}}">
+  <view class="category" bindtap="shangjia" wx:for="{{list}}" wx:key="key">
+    <navigator url="/pages/changce/merch/detail?id={{item.id}}">
+      <image mode="widthFix" src='{{item.logo}}'></image>
+      <view class="dianming">{{item.merchname}}</view>
+    </navigator>
+  </view>
+</scroll-view>

@@ -1,0 +1,166 @@
+page {
+  background: #f5f5f5;
+}
+
+.wallet {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.mywallet {
+  background-color: white;
+  margin-top: 20rpx;
+  padding: 30rpx;
+}
+
+.title {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.mywallet_info {
+  margin-top: 20rpx;
+}
+
+.wallet_img {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.wallet_money {
+  color: #333;
+  font-size: 48rpx;
+  margin-left: 20rpx;
+}
+
+.addright {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.walletcash {
+  font-size: 24rpx;
+  color: #999;
+  margin-right: 20rpx;
+}
+
+.list {
+  margin-top: 20rpx;
+  background-color: white;
+  padding: 0rpx 30rpx;
+  height: 90rpx;
+}
+
+.listimg {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.trade {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.yucon {
+  
+}
+
+.yulie {
+  width: 100%;
+  height:150rpx;
+  border-radius: 10rpx;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.zhongjuian {
+  width: 100%;
+  background: #fff;
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+
+/* 
+.yulie:nth-child(1){ background: #ffab36;}
+.yulie:nth-child(2){ background: #ff8734;}
+.yulie:nth-child(3){ background: #fd6758;}
+.yulie:nth-child(4){ background: #e94c89;}
+.yulie:nth-child(5){ background: #9935ff;}
+.yulie:nth-child(6){ background: #2a92ec;}
+.yulie:nth-child(7){ background: #0984cd;}
+.yulie:nth-child(8){ background: #00c6ac;}
+.yulie:nth-child(9){ background: #36be5f;}
+.yulie:nth-child(10){ background: #75c02a;} */
+
+.yuliel {
+  display: flex;
+  height: 150rpx;
+  width: 65%;
+  border-right: 1px dashed #fff;
+}
+
+.yulielog {
+  width: 90rpx;
+  height: 90rpx;
+  background: #fff;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+.yulielogs {
+  width: 90rpx;
+  height: 90rpx;
+  background: #fff;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20rpx;
+}
+
+.chaan {
+  font-size: 24rpx;
+}
+
+.yulielmz {
+  color: #fff;
+  font-size: 30rpx;
+  width: 320rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.yulir {
+  width: 30%;
+  margin-left: 4%;
+  height:150rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.yulirje {
+  width: 100%;
+  color: #fff;
+  font-size: 34rpx;
+  font-weight: 700;
+  margin-top: 5rpx;
+  text-align: center;
+}
+
+.yulirjx {
+  width: 100%;
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+}
+.sdhas{
+  display: flex;
+  padding: 20rpx 0rpx;
+}

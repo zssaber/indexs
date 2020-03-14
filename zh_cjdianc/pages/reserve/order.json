@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "预约订单列表",
+    "usingComponents": {
+        "cardlist": "/zh_cjdianc/dist/cardlist/index"
+    }
+}

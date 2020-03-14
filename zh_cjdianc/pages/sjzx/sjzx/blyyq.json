@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "编辑优惠券",
+  "usingComponents": {
+      "cardlist": "/zh_cjdianc/dist/cardlist/index"
+  }
+}

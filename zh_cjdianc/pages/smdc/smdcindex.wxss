@@ -1,0 +1,73 @@
+@import "../takeout/takeoutindex.wxss";
+
+.pin {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 30rpx;
+}
+
+.bg {
+  background: #ff7d5c;
+  position: relative;
+  height: 110rpx;
+}
+
+.sjinfonav {
+  width: 100%;
+  height: 7vh;
+  margin-top:115rpx;
+}
+
+.sjleftimg {
+width: 140rpx;
+height: 140rpx;
+margin-right: 20rpx;
+border-radius: 10rpx;
+
+}
+
+
+.sjright1-l {
+  width: 300rpx;
+}
+
+.sc {
+  background: #fff;
+  color: #000;
+}
+
+.sjright3text {
+  font-size: 24rpx;
+  padding: 0 20rpx;
+}
+
+.xfview {
+  min-width: 130rpx;
+  height: 100%;
+  top: 0rpx;
+  right: 40rpx;
+  font-size: 22rpx;
+  z-index: 11;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.xfbt {
+  width: 120rpx;
+  height: 60rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0rpx;
+}
+
+.xfbt image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}

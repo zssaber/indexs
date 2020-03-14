@@ -1,0 +1,51 @@
+<form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true">
+	<view class="container">
+		<!-- <view class="head">
+            <text>{{system.rz_title}}</text>
+            <text>申请表</text>
+        </view>
+        <view class="pt_jj">
+            <rich-text nodes="{{system.rz_ms}}"></rich-text>
+        </view> -->
+		<view class="process">
+			<view>加入{{system.rz_title}}，只需三步</view>
+			<view class="rzlc flex-row flex-x-center">
+				<view class="rzitem">
+					<view class="asdass">
+						<image src="../../img/shenq.png"></image>
+						<view>申请</view>
+					</view>
+					<view class="ziai">请您耐心填写商家入驻表方便我们及时联系您</view>
+				</view>
+
+				<view class="rzitem1">
+					<image src="../../img/liuc.png"></image>
+				</view>
+
+				<view class="rzitem">
+					<view class="asdass">
+						<image src="../../img/shenp.png"></image>
+						<view>审批</view>
+					</view>
+					<view class="ziai">我们将对符合入驻要求的商家同意审批</view>
+				</view>
+
+				<view class="rzitem1">
+					<image src="../../img/liuc.png"></image>
+				</view>
+
+				<view class="rzitem">
+					<view class="asdass">
+						<image src="../../img/hezuo.png"></image>
+						<view>合作</view>
+					</view>
+					<view class="ziai">希望我们能够达成互利互惠的合作关系</view>
+				</view>
+			</view>
+		</view>
+		<button formType="submit" style="background:{{color}}">我要入驻</button>
+		<button style="background:#c6c6c6" wx:if="{{is_tgy==1&&usernum==storenum}}">
+			入驻商家名额已满</button>
+		<button bindtap="submits" style="background:{{color}}" wx:if="{{is_tgy==1&&usernum>>storenum}}">推荐商家入驻</button>
+	</view>
+</form>

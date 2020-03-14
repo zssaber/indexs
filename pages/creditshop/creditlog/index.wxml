@@ -1,0 +1,63 @@
+<view class="page">
+  <view class="total">
+    <view class="title">我的积分</view>
+    <view class="num">{{total}}</view>
+    <button class='btns' bindtap="eject">赠送积分</button>
+  </view>
+
+<view class="bag" wx:if='{{showModal}}'></view>
+  <view class="modalDlg" catchtouchmove='preventTouchMove' wx:if='{{showModal}}'>
+    <view class='windowRow'>
+      <text class='userTitle'>赠送积分
+  </text>
+      <view class='back' bindtap='back'>
+        关闭
+      </view>
+    </view>
+    <view class='wishName'>
+      <input bindinput="inputTyping" type="text" value="" placeholder="请输入积分"></input>
+    </view>
+    <view class='wishbnt'>
+      <button disabled="{{disable}}" open-type="share" class='wishbnt_bt'>确认</button>
+    </view>
+  </view>
+
+
+<view class="xunz">
+<view class="lift">
+  <view class="{{isChecked?'is_checked':'bttnn'}}" bindtap="shangpin">商品兑换明细</view>
+  </view>
+  <view class="lifts">
+  <view class="{{isChecked?'bttnn':'is_checked'}}" bindtap="zengsong">赠送积分明细</view>
+  </view>
+</view>
+
+  <view class="record">
+    <view class="item" wx:for="{{list}}" wx:key="key"wx:if="{{xinashi==1}}">
+      <view class="item-label">
+        <view class="name">{{item.title}}</view>
+        <view class="date">{{item.createtime}}</view>
+      </view>
+      <view class="item-remark">-{{item.credit}}积分
+        <text wx:if="{{item.money>0}}"> -￥{{item.money}}</text>
+      </view>
+    </view>
+      <view class="item" wx:for="{{re}}" wx:key="key" wx:if="{{xinashi==0}}">
+    <view class="item-label">
+      <view class="name">{{item.disp==1?'获取赠送积分':'赠送他人积分'}}</view>
+      <view class="date">{{item.create_time}}</view>
+    </view>
+    <view class="item-remark">{{item.disp==1?'+':'-'}}{{item.jifen}}积分</view>
+  </view>
+  </view>
+</view>
+<view class="fui-loading" hidden="{{load}}">
+  <view class="icon"></view>
+  <view class="text">正在加载</view>
+</view>
+<view class="fui-loading empty" hidden="{{more}}">
+  <view class="text">没有更多了</view>
+</view>
+<view class="fui-loading empty" hidden="{{notgoods}}">
+  <view class="text">暂时没有任何商品</view>
+</view>

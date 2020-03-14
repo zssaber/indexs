@@ -1,0 +1,176 @@
+<form bindsubmit="formSubmit" reportSubmit="true">
+  <view class="font">
+    <view class="fukuan_header">
+      <image class="fukuan_img" src="{{storeinfo.store.logo}}"></image>
+      <view class="fukuan_seller">{{storeinfo.store.name}}</view>
+    </view>
+    <view class="fukuan_pay">
+      <view class="fukuan_money">
+        <input bindinput="money" class="fukuan_input" placeholder="消费金额" placeholderStyle="color:#ccc;" type="digit"></input>
+        <text class="money_text">询问店员后输入</text>
+      </view>
+      <view class="weui-cells weui-cells_after-title" style="border-top: 1rpx solid #f4f4f4;" wx:if="{{!haveQg}}">
+        <view bindtap="showcart" class="weui-cell weui-cell_access" hoverClass="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image mode="aspectFit" src="../../img/personal/youhuiquan.png" style="margin-right: 15rpx;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
+          </view>
+          <view class="weui-cell__bd">商家优惠券</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" wx:if="{{Coupons.length==0}}">暂无此商家优惠券</view>
+          <view class="weui-cell__ft_in-access" wx:if="{{Coupons.length>0&&yhqkdje==0}}">选择优惠券</view>
+          <view class="weui-cell__ft_in-access" style="color:#ff7d5c;" wx:if="{{Coupons.length>0&&yhqkdje!=0}}">-￥{{yhqkdje}}</view>
+        </view>
+      </view>
+      <view class="weui-cells weui-cells_after-title" style="border-top: 1rpx solid #f4f4f4;" wx:if="{{!haveQg}}">
+        <view bindtap="hbshowcart" class="weui-cell weui-cell_access" hoverClass="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image mode="aspectFit" src="../../img/hb.png" style="margin-right: 15rpx;vertical-align: middle;width:40rpx; height: 40rpx;"></image>
+          </view>
+          <view class="weui-cell__bd">红包</view>
+          <view class="weui-cell__ft weui-cell__ft_in-access" wx:if="{{hbarr.length==0}}">暂无红包</view>
+          <view class="weui-cell__ft_in-access" wx:if="{{hbarr.length>0&&hbkdje==0}}">选择红包</view>
+          <view class="weui-cell__ft_in-access" style="color:#ff7d5c;" wx:if="{{hbarr.length>0&&hbkdje!=0}}">-￥{{hbkdje}}</view>
+        </view>
+      </view>
+      <view class="sfk flex-row flex-y-centers">
+        <view class="sfk-fv flex-grow-0">
+          <view>已优惠</view>
+          <view class="{{yhqkdje==0?'':'yh_money'}}" wx:if="{{yhqkdje!=0}}">￥{{yhqkdje==0?hbkdje:yhqkdje}}</view>
+          <view class="{{hbkdje==0?'':'yh_money'}}" wx:if="{{yhqkdje==0}}">￥{{yhqkdje==0?hbkdje:yhqkdje}}</view>
+        </view>
+        <view class="flex-grow-1 xiaoji">
+          <view>实付款</view>
+          <view class="{{money==''?'':'yh_money'}}">￥{{yh_money==''?money:yh_money}}</view>
+        </view>
+      </view>
+    </view>
+    <view catchtap="closecart" class="share-modal {{share_modal_active?'active':''}}">
+      <view class="share-modal-body">
+        <view class="yhqhead">选择优惠券</view>
+        <radio-group bindchange="radioChanges" class="radio-group" name="radiogroup">
+          <scroll-view scrollY style="height: 400rpx;">
+            <label catchtap="xzq" data-full="{{item.full}}" data-kdje="{{item.reduce}}" data-rdid="{{item.id}}" data-type="代金券" wx:for="{{Coupons}}">
+              <view class="mdlist">
+                <view class="coupon-item unreceive" id="{{item.coupon_id}}">
+                  <view class="item-left" style="background-image: url('https://ae2019.oss-cn-shanghai.aliyuncs.com/pub/admin//20200102/d2c416556ff2368bdbe0d0faf064361a7c90b934.png');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">
+                    <text class="num">{{item.reduce}}</text>
+                    <text class="unit">元</text>
+                  </view>
+                  <view class="item-right" style="background-image: url('https://ae2019.oss-cn-shanghai.aliyuncs.com/pub/admin//20200102/245c732f347df3024c68ef9efe329f48df0666a4.png');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">
+                    <view class="rhrtrtg">
+                      <text class="name">{{item.name}}</text>
+                      <text class="conditions" wx:if="{{item.full!='0.0'}}">满{{item.full}}可用</text>
+                      <text class="conditions" wx:else>无门槛</text>
+                      <text class="prefer">有效期至{{item.end_time}}</text>
+                    </view>
+                    <view class="radio" style="padding-top:60rpx;padding-right: 15rpx;">
+                      <radio checked="{{activeradio==item.id}}" color="{{color}}" disabled="{{gwcinfo.money<item.full}}" value="{{item.id}}"></radio>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </label>
+            <view class="kong" wx:if="{{Coupons.length==0}}">
+              <image src="../../img/wushuju.png"></image>
+              <view>暂无此门店的优惠券</view>
+            </view>
+          </scroll-view>
+        </radio-group>
+      </view>
+    </view>
+    <view catchtap="hbclosecart" class="share-modal {{hbshare_modal_active?'active':''}}">
+      <view class="share-modal-body">
+        <view class="yhqhead">选择红包</view>
+        <radio-group bindchange="hbradioChange" class="radio-group" name="hbradiogroup">
+          <scroll-view scrollY style="height: 400rpx;">
+            <label catchtap="xzhb" data-full="{{item.full}}" data-kdje="{{item.reduce}}" data-rdid="{{item.id}}" data-type="红包" wx:for="{{hbarr}}">
+              <view class="mdlist">
+                <view class="coupon-item unreceive" id="{{item.coupon_id}}">
+                  <view class="item-left" style="background-image: url('https://ae2019.oss-cn-shanghai.aliyuncs.com/pub/admin//20200102/a629061c17ed4a540541728fe75085ffd92ffcfe.png');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">
+                    <text class="num">{{item.reduce}}</text>
+                    <text class="unit">元</text>
+                  </view>
+                  <view class="item-right" style="background-image: url('https://ae2019.oss-cn-shanghai.aliyuncs.com/pub/admin//20200102/245c732f347df3024c68ef9efe329f48df0666a4.png');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">
+                    <view class="rhrtrtg">
+                      <text class="name">{{item.name}}</text>
+                      <text class="conditions" wx:if="{{item.full!='0.0'}}">满{{item.full}}可用</text>
+                      <text class="conditions" wx:else>无门槛</text>
+                      <text class="prefer">有效期至{{item.end_time}}</text>
+                    </view>
+                    <view class="radio" style="padding-top:60rpx;padding-right: 15rpx;">
+                      <radio checked="{{hbactiveradio==item.id}}" color="{{color}}" disabled="{{gwcinfo.money<item.full}}" value="{{item.id}}"></radio>
+                    </view>
+                  </view>
+                </view>
+
+              </view>
+            </label>
+            <view class="kong" wx:if="{{hbarr.length==0}}">
+              <image src="../../img/wushuju.png"></image>
+              <view>暂无可用红包</view>
+            </view>
+          </scroll-view>
+        </radio-group>
+      </view>
+    </view>
+    <view class="footer">
+      <view class="footer_left" style="color:{{color}}">{{yh_money==''?money:yh_money}}元</view>
+      <button bindtap="xszz" class="footer_right" style="background:{{color}}">立即付款</button>
+    </view>
+  </view>
+  <view bindtap="yczz" class="drawer_screen" wx:if="{{showModal}}"></view>
+  <view class="drawer_box" wx:if="{{showModal}}">
+    <view class="drawer_title">请选择支付方式</view>
+    <view class="weui-cells weui-cells_after-title">
+      <radio-group bindchange="radioChange" class="radio-group" name="radiogroup">
+        <label>
+          <view class="weui-cell">
+            <view class="zfimg">
+              <image src="../../img/weixin.png"></image>
+            </view>
+            <view class="weui-cell__bd">微信支付</view>
+            <view class="weui-cell__ft">
+              <radio checked="{{zffs==1}}" value="wxzf"></radio>
+            </view>
+          </view>
+        </label>
+        <label wx:if="{{kqyue}}">
+          <view class="weui-cell" style="border-top:1rpx solid #e6e6e6;">
+            <view class="zfimg">
+              <image src="../../img/yeqb.png"></image>
+            </view>
+            <view class="weui-cell__bd">余额支付
+              <text class="yetext">您的余额 {{wallet}}</text>
+            </view>
+            <view class="weui-cell__ft">
+              <radio checked="{{zffs==2}}" color="#FF9700" disabled="{{!kqyue}}" value="yezf"></radio>
+            </view>
+          </view>
+        </label>
+        <label wx:if="{{userMoney}}">
+            <view class="weui-cell" style="border-top:1rpx solid #e6e6e6;">
+              <view class="zfimg">
+                <image src="../../img/yeqb.png"></image>
+              </view>
+              <view class="weui-cell__bd">储值卡支付
+                <text class="yetext">您的余额 {{userMoney.money}}</text>
+              </view>
+              <view class="weui-cell__ft">
+                <radio checked="{{zffs==5}}" color="#FF9700" disabled="{{!kqyue}}" value="czkzf"></radio>
+              </view>
+            </view>
+          </label>
+      </radio-group>
+    </view>
+    <view class="drawer_title1">您选择的{{zfwz}}
+      <text wx:if="{{zffs==3}}">({{jf_proportion}}积分可抵1元)</text>
+    </view>
+    <button class="{{btntype}}" disabled="{{zfz}}" formType="submit">
+      <view wx:if="{{!zfz}}">确定支付
+        <text class="zftext">￥{{!yh_money?money:yh_money}}</text>
+      </view>
+      <view wx:if="{{zfz}}">
+        <text class="zfztext">支付中...</text>
+      </view>
+    </button>
+  </view>
+</form>

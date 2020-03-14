@@ -1,0 +1,22 @@
+@import "../../common/city-picker.wxss";
+
+checkbox-group text {
+    padding-right: 15rpx;
+}
+
+.picker-group {
+    display: flex;
+}
+
+.picker-group picker {
+    width: 40%;
+}
+
+.btn {
+    font-size: 32rpx;
+}
+.navigator-content-text{
+  border-radius: 50%;
+  overflow: hidden;
+  
+}

@@ -1,0 +1,62 @@
+ <view class="tj" bindtap="tuanduidingdan" wx:if="{{tgy=='1'}}">推荐店铺入驻</view>
+ <view class="head ba_f">
+    <view bindtap="one" class="{{ac_index==0?'sele':'no_sele'}}" style="border-color:{{ac_index==0?color:''}}">一级</view>
+    <view bindtap="two" class="{{ac_index==1?'sele':'no_sele'}}" style="border-color:{{ac_index==1?color:''}}" wx:if="{{fxset.is_ej=='2'}}">二级</view>
+    <view bindtap="tgy" class="{{ac_index==2?'sele':'no_sele'}}" style="border-color:{{ac_index==0?color:''}}" wx:if="{{tgy=='1'}}">下级店铺</view>
+</view>
+<view class="list mar_t ba_f" wx:if="{{ac_index==0}}">
+    <view class="pa" wx:for="{{MyTeam.one}}" wx:key="key">
+        <view class="liex">
+        <view class="toux">
+            <image class="dis_in" mode="aspectFill" src="{{item.img}}"></image>
+            </view>
+            <view class="dis_in">
+                <view class="fon_30 color_6">{{item.name}}</view>
+                <view class="fon_24 color_9 pa_0">成为下线时间 {{item.time}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="jzwb" wx:if="{{ac_index==0&&MyTeam.one.length==0}}">
+    <view class="hx"></view>
+    <view class="wz">您暂无一级团队哦~</view>
+    <view class="hx"></view>
+</view>
+
+<view class="list mar_t ba_f" wx:if="{{ac_index==1}}">
+    <view class="pa" wx:for="{{MyTeam.two}}" wx:key="key">
+        <view>
+            <image class="dis_in" mode="aspectFill" src="{{item.img}}"></image>
+            <view class="dis_in">
+                <view class="fon_30 color_6">{{item.name}}</view>
+                <view class="fon_24 color_9 pa_0">成为下线时间 {{item.time}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="jzwb" wx:if="{{ac_index==1&&MyTeam.two.length==0}}">
+    <view class="hx"></view>
+    <view class="wz">您暂无二级团队哦~</view>
+    <view class="hx"></view>
+</view>
+
+<view class="list mar_t ba_f" wx:if="{{ac_index==2}}">
+    <view class="pa" wx:for="{{mystore}}" wx:key="key">
+      <navigator url="/zh_cjdianc/pages/quan/dainjia/dainjia?storeid={{item.id}}">
+        <view class="liex">
+           <view class="toux">
+            <image class="dis_in" mode="aspectFill" src="{{item.logo}}"></image></view>
+            <view class="dis_in">
+                <view class="fon_30 color_6">{{item.name}}</view>
+                <view class="fon_24 color_9 pa_0" style="padding:5rpx 0;">店铺地址：{{item.address}}</view>
+                <view class="fon_24 color_9 pa_0" style="padding:5rpx 0;">店铺电话：{{item.tel}}</view>
+            </view>
+        </view>
+      </navigator>
+    </view>
+</view>
+<view class="jzwb" wx:if="{{ac_index==2&&mystore.length==0}}">
+    <view class="hx"></view>
+    <view class="wz">您暂无下级店铺哦~</view>
+    <view class="hx"></view>
+</view>

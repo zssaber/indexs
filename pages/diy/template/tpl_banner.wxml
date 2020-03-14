@@ -1,0 +1,49 @@
+<view class="bgbg"></view>
+
+
+
+
+<view class="index-banner" wx:if="{{diyitem.data.length>1}}">
+
+  <view class='swiper-container'>
+    <swiper autoplay="{{autoplay}}" class='swiper-block' autoplay='true' circular='true' current='0' bindchange='swiperChange' interval='5000' duration='1000'>
+      <block wx:key='unique' wx:for='{{diyitem.data}}' wx:for-index="childid" wx:for-item="childitem" wx:key="key">
+        <swiper-item class='swiper-item'>
+          <image bindchange='imageChange' data-type="{{diyitemid}}" id='{{index}}' src='{{childitem.imgurl}}' class='slide-image {{swiperCurrent == index ? "active" : ""}}' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="dots">
+      <block wx:for="{{diyitem.data}}" wx:key="unique" wx:key="key">
+        <view class='dot {{swiperCurrent == index ? "active" : ""}}'></view>
+      </block>
+    </view>
+  </view>
+</view>
+
+
+<block wx:else>
+  <view class="index-adcs-sqiper index-banner-sqiper" wx:for="{{diyitem.data}}" wx:for-index="childid" wx:for-item="childitem" wx:key="key">
+    <view bindtap="navigate" class="index-advs-navigator" data-appid="{{childitem.appid}}" data-appurl="{{childitem.appurl}}" data-phone="{{childitem.phone}}" data-url="{{childitem.linkurl}}">
+      <image class="advimg" mode="widthFix" src="{{childitem.imgurl}}"></image>
+    </view>
+  </view>
+</block>
+
+<!-- <view class="huiyuan">
+  <view>会员</view>
+  <view class="dian">·</view>
+  <view>办理</view>
+</view>
+<view class="ka">
+<image src="https://huanyucanguan.com/attachment/images/7/2019/12/Z3Z13F313D111Z1rr15Y51311X3RyB.png"></image>
+   <view class="neiaa">
+      <view class="tou">{{waimai.hy_name}}</view>
+      <view class="qunyi">畅享七大会员特权</view>
+      <view class="jiaqian">
+      <view>只需</view>
+      <view class="qiam">￥{{vip.money}}</view>
+      </view>
+   </view>
+   <view bindtap="lookck" class="houmai">立即购买</view>
+</view> -->

@@ -1,0 +1,117 @@
+<view class="">
+  <view class="containers">
+    <view class="title">
+      <view class="diqu">
+        <picker mode="region" value="{{region}}" bindchange="changeRegin">
+            <text>{{region[2]}}</text>
+        </picker>
+        <image mode="widthFix" src="../../zh_cjdianc/pages/img/down1.png"></image>
+      </view>
+      <view class="search_arr" bindtap='search'>
+        <icon class="searchcion" size='14' type='search'></icon>
+        <input bindconfirm="bindSearch" bindfocus="bindFocus" bindinput="bindInput" focus="{{focusin}}" name="search" placeholder="输入关键字进行搜索" value="{{keyword}}"></input>
+
+      </view>
+      <view bindtap="bindback" class="quxiaio" wx:if="{{fromsearch}}">取消</view>
+    </view>
+  </view>
+
+
+
+
+
+  <view class="classify">
+    <view class="nav_left">
+
+
+      <block wx:for="{{cates}}" wx:key="key">
+        <nav bindtap="bindCategoryEvents" class="nav_left_items {{category_parent_selected==item.id?'active':''}}" data-id="{{item.id}}" data-level="1" data-title="{{item.catename}}">{{item.catename}}</nav>
+      </block>
+    </view>
+
+
+    <!-- <view class="screen in" wx:if="{{isNearShow}}">
+    <view bindtap="bindDisEvents" class="title" data-id="" data-title="">选择距离</view>
+    <view class="cate" data-catlevel="" style="height:125px;">
+      <view class="item">
+        <view wx:for="{{disopt}}" wx:key="key">
+          <nav bindtap="bindDisEvents" class="{{range==item.range?'on':''}}" data-id="{{item.range}}" data-title="{{item.title}}">{{item.title}}</nav>
+        </view>
+      </view>
+    </view>
+  </view> -->
+
+
+
+
+
+  <scroll-view class="nav_right" scroll-y='true'>
+      <view class="nav_right" wx:if="{{total<=0&&!loading}}">
+        <view class="sssss">暂时没有搜索到任何店铺!</view>
+      </view>
+
+      <view class="box" wx:else>
+        <black class="nav_right_items" wx:for="{{list}}" wx:key="key">
+          <view class="hotel">
+            <view class="hotelImg">
+              <image class="round" src="{{item.logo}}" wx:if="{{item.logo}}"></image>
+              <image class="round" src="/static/images/noface.png" wx:else></image>
+            </view>
+            <view class="hotelMain">
+              <view class="name">{{item.merchname}}</view>
+              <view class="label">主营：{{item.salecate}}</view>
+            </view>
+
+            <view class="gobtn">
+              <navigator url="/pages/changce/merch/detail?id={{item.id}}" wx:key="key">
+                进店
+              </navigator>
+            </view>
+
+          </view>
+          <view class="invitepersonal">
+            <view class="inviteimage" wx:for="{{item.goods}}" wx:key="key" wx:for-item="goods">
+              <image mode="widthFix" src="https://arsm.ayuehotel.com/attachment/{{goods.thumb}}"></image>
+            </view>
+          </view>
+        </black>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+
+
+
+<view class="navbar flex-row {{__device}}" style="height:115rpx;background: #fff; position: fixed; z-index:99999999999;">
+  <navigator class="flex-grow-1 flex-y-center" openType="redirect" url="/pages/index/index">
+    <view>
+      <image class="navbar-icon" src="/static/images/tabbar/icon-1.png"></image>
+      <view class="navbar-text" style="color: #cacaca;">首页</view>
+    </view>
+  </navigator>
+  <navigator class="flex-grow-1 flex-y-center" openType="redirect" url="/pages/changce/merch/index">
+    <view>
+      <image class="navbar-icon" src="/static/images/tabbar/icon-2-active.png"></image>
+      <view class="navbar-text" style="color: #FF9B35;">商圈</view>
+    </view>
+  </navigator>
+  <navigator class="flex-grow-1 flex-y-center" openType="redirect" url="/pages/changce/merch/apply">
+    <view>
+      <image class="navbar-icon" src="/static/images/tabbar/icon-3.png"></image>
+      <view class="navbar-text" style="color: #cacaca;">入驻</view>
+    </view>
+  </navigator>
+  <navigator class="flex-grow-1 flex-y-center" openType="redirect" url="/pages/member/cart/index">
+    <view>
+      <image class="navbar-icon" src="/static/images/tabbar/icon-4.png"></image>
+      <view class="navbar-text" style="color:#cacaca;">购物车</view>
+    </view>
+  </navigator>
+  <navigator class="flex-grow-1 flex-y-center" openType="redirect" url="/pages/member/index/index">
+    <view>
+      <image class="navbar-icon" src="/static/images/tabbar/icon-5.png"></image>
+      <view class="navbar-text" style="color:#cacaca;">我的</view>
+    </view>
+  </navigator>
+</view>

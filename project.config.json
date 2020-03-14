@@ -1,0 +1,920 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.0",
+	"appid": "wx7fda3d593c11bdd5",
+	"projectname": "%E9%A4%90%E9%A5%AE%E5%B0%8F%E7%A8%8B%E5%BA%8F",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "zh_cjpt/pages/logs/zj",
+					"pathName": "zh_cjpt/pages/logs/zj",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "收货地址",
+					"pathName": "zh_cjdianc/pages/wddz/xuanz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wddz/bjdz",
+					"pathName": "zh_cjdianc/pages/wddz/bjdz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wddz/bjdz",
+					"pathName": "zh_cjdianc/pages/wddz/bjdz",
+					"query": "bjid=282",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/my/index",
+					"pathName": "zh_cjdianc/pages/my/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "zh_cjdianc/pages/wddd/order",
+					"pathName": "zh_cjdianc/pages/wddd/order",
+					"query": "status=4",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "id=240",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/goods/detail/index",
+					"pathName": "pages/goods/detail/index",
+					"query": "id=240",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/detail/index",
+					"pathName": "pages/order/detail/index",
+					"query": "id=298",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wddd/order",
+					"pathName": "zh_cjdianc/pages/wddd/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wddz/bjdz",
+					"pathName": "zh_cjdianc/pages/wddz/bjdz",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/my/index",
+					"pathName": "zh_cjdianc/pages/my/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/lingquan",
+					"pathName": "zh_cjdianc/pages/quan/lingquan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/yiye",
+					"pathName": "zh_cjdianc/pages/quan/yiye",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjpt/pages/index/index",
+					"pathName": "zh_cjpt/pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/merch/apply",
+					"pathName": "pages/changce/merch/apply",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/my/index",
+					"pathName": "zh_cjdianc/pages/my/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/hyk/hyk",
+					"pathName": "zh_cjdianc/pages/hyk/hyk",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/takeout/takeoutindex",
+					"pathName": "zh_cjdianc/pages/takeout/takeoutindex",
+					"query": "storeid=122",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/seller/index",
+					"pathName": "zh_cjdianc/pages/seller/index",
+					"query": "sjid=123",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/reserve/reserve",
+					"pathName": "zh_cjdianc/pages/reserve/reserve",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/spgl/spfl",
+					"pathName": "zh_cjdianc/pages/sjzx/spgl/spfl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/distribution/downline",
+					"pathName": "zh_cjdianc/pages/distribution/downline",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/lingquan",
+					"pathName": "zh_cjdianc/pages/quan/lingquan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/yiye",
+					"pathName": "zh_cjdianc/pages/quan/yiye",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/takeout/takeoutindex",
+					"pathName": "zh_cjdianc/pages/takeout/takeoutindex",
+					"query": "storeid=120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/article/detail",
+					"pathName": "pages/changce/article/detail",
+					"query": "id=15",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/article/list",
+					"pathName": "pages/changce/article/list",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 28,
+					"name": "积分赠送",
+					"pathName": "zh_cjdianc/pages/jifenzs/jifenzs",
+					"query": "coupon_id=1&user_id=4274&time=1577673501",
+					"scene": null
+				},
+				{
+					"id": 29,
+					"name": "zh_cjdianc/pages/quan/zijiyiye/zijiyiye",
+					"pathName": "zh_cjdianc/pages/quan/zijiyiye/zijiyiye",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 30,
+					"name": "zh_cjdianc/pages/quan/dainjia/dainjia",
+					"pathName": "zh_cjdianc/pages/quan/dainjia/dainjia",
+					"query": "storeid=120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/login",
+					"pathName": "zh_cjdianc/pages/sjzx/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/zijiyiye/zijiyiye",
+					"pathName": "zh_cjdianc/pages/quan/zijiyiye/zijiyiye",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/jifenzs/jifenzs",
+					"pathName": "zh_cjdianc/pages/jifenzs/jifenzs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/wmdd/wmdd",
+					"pathName": "zh_cjdianc/pages/sjzx/wmdd/wmdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/article/list",
+					"pathName": "pages/changce/article/list",
+					"query": "cateid=12&index=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/seller/index",
+					"pathName": "zh_cjdianc/pages/seller/index",
+					"query": "scene=122",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/reserve/order",
+					"pathName": "zh_cjdianc/pages/reserve/order",
+					"query": "scene=122",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/seller/fukuan",
+					"pathName": "zh_cjdianc/pages/seller/fukuan",
+					"query": "scene=122",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wallet/walletmx",
+					"pathName": "zh_cjdianc/pages/wallet/walletmx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wallet/wallet",
+					"pathName": "zh_cjdianc/pages/wallet/wallet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wallet/walletmx",
+					"pathName": "zh_cjdianc/pages/wallet/walletmx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 42,
+					"name": "zh_cjdianc/pages/wallet/jiayiminxi",
+					"pathName": "zh_cjdianc/pages/wallet/jiayiminxi",
+					"query": "store_id=120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/reserve/reserve",
+					"pathName": "zh_cjdianc/pages/reserve/reserve",
+					"query": "store_id=120",
+					"scene": null
+				},
+				{
+					"id": 44,
+					"name": "zh_cjdianc/pages/reserve/reserve",
+					"pathName": "zh_cjdianc/pages/reserve/reserve",
+					"query": "scene=120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/goods/index/index",
+					"pathName": "pages/goods/index/index",
+					"query": "fromsearch=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wallet/wallet",
+					"pathName": "zh_cjdianc/pages/wallet/wallet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wallet/walletmx",
+					"pathName": "zh_cjdianc/pages/wallet/walletmx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/custom/index",
+					"pathName": "pages/custom/index",
+					"query": "pageid=38",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/distribution/downline",
+					"pathName": "zh_cjdianc/pages/distribution/downline",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/my/index",
+					"pathName": "zh_cjdianc/pages/my/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/seller/fukuan",
+					"pathName": "zh_cjdianc/pages/seller/fukuan",
+					"query": "storeid=120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/smdc/smdcindex",
+					"pathName": "zh_cjdianc/pages/smdc/smdcindex",
+					"query": "scene=1%252C120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/smdc/smdcindex",
+					"pathName": "zh_cjdianc/pages/smdc/smdcindex",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/ruzhu/index",
+					"pathName": "zh_cjdianc/pages/ruzhu/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wallet/wallet",
+					"pathName": "zh_cjdianc/pages/wallet/wallet",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/ruzhu/info",
+					"pathName": "zh_cjdianc/pages/ruzhu/info",
+					"query": "form_id=the%20formId%20is%20a%20mock%20one&state=undefined",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/ruzhu/info",
+					"pathName": "zh_cjdianc/pages/ruzhu/info",
+					"query": "tgy=1&form_id=the%20formId%20is%20a%20mock%20one&state=undefined",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/ruzhu/index",
+					"pathName": "zh_cjdianc/pages/ruzhu/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/jifenzs/jifenzs",
+					"pathName": "zh_cjdianc/pages/jifenzs/jifenzs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"pathName": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/sjzx",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/sjzx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 63,
+					"name": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"pathName": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"query": "id=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"pathName": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"pathName": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/my/myyhq",
+					"pathName": "zh_cjdianc/pages/my/myyhq",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/yiye",
+					"pathName": "zh_cjdianc/pages/quan/yiye",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/yiye",
+					"pathName": "zh_cjdianc/pages/quan/yiye",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/sjzx",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/sjzx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/sjzx",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/sjzx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/yhqgl",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/yhqgl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/blyyq",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/blyyq",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/yhqgl",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/yhqgl",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/zijiyiye/zijiyiye",
+					"pathName": "zh_cjdianc/pages/quan/zijiyiye/zijiyiye",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/my/index",
+					"pathName": "zh_cjdianc/pages/my/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/Liar/loginindex",
+					"pathName": "zh_cjdianc/pages/Liar/loginindex",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/index/index",
+					"pathName": "zh_cjdianc/pages/index/index",
+					"query": "scene=4269",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/index/index",
+					"pathName": "zh_cjdianc/pages/index/index",
+					"query": "e=4269",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/merch/apply",
+					"pathName": "pages/changce/merch/apply",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/lingquan",
+					"pathName": "zh_cjdianc/pages/quan/lingquan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjpt/pages/mine/uppaword",
+					"pathName": "zh_cjpt/pages/mine/uppaword",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/ruzhu/info",
+					"pathName": "zh_cjdianc/pages/ruzhu/info",
+					"query": "form_id=the%20formId%20is%20no%20longer%20available%20in%20develop%20or%20trial%20version%20of%20this%20mini%20program&state=undefined",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/wmdd/wmdd",
+					"pathName": "zh_cjdianc/pages/sjzx/wmdd/wmdd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/lingquan",
+					"pathName": "zh_cjdianc/pages/quan/lingquan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/seller/index",
+					"pathName": "zh_cjdianc/pages/seller/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/reserve/order",
+					"pathName": "zh_cjdianc/pages/reserve/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wallet/storecz",
+					"pathName": "zh_cjdianc/pages/wallet/storecz",
+					"query": "storeid=120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/wallet/walletadd",
+					"pathName": "zh_cjdianc/pages/wallet/walletadd",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/distribution/jrhhr",
+					"pathName": "zh_cjdianc/pages/distribution/jrhhr",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 91,
+					"name": "zh_cjdianc/pages/distribution/index",
+					"pathName": "zh_cjdianc/pages/distribution/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/distribution/jrhhr",
+					"pathName": "zh_cjdianc/pages/distribution/jrhhr",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/ruzhu/info",
+					"pathName": "zh_cjdianc/pages/ruzhu/info",
+					"query": "form_id=the%20formId%20is%20no%20longer%20available%20in%20develop%20or%20trial%20version%20of%20this%20mini%20program&state=undefined",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/article/list",
+					"pathName": "pages/changce/article/list",
+					"query": "cateid=12&index=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/article/detail",
+					"pathName": "pages/changce/article/detail",
+					"query": "id=16",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/custom/index",
+					"pathName": "pages/custom/index",
+					"query": "pageid=39",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/seller/index",
+					"pathName": "zh_cjdianc/pages/seller/index",
+					"query": "scene=120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/sjzx",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/sjzx",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/wdyylm",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/wdyylm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/wdyylm",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/wdyylm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/blyyq",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/blyyq",
+					"query": "id=19",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/note",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/note",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/wdyylm",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/wdyylm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/dainjia/dainjia",
+					"pathName": "zh_cjdianc/pages/quan/dainjia/dainjia",
+					"query": "storeid=130",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/article/list",
+					"pathName": "pages/changce/article/list",
+					"query": "cateid=12&index=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/sjzx/note",
+					"pathName": "zh_cjdianc/pages/sjzx/sjzx/note",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/article/list",
+					"pathName": "pages/changce/article/list",
+					"query": "cateid=12&index=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjpt/pages/mine/index",
+					"pathName": "zh_cjpt/pages/mine/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/order/create/index",
+					"pathName": "pages/order/create/index",
+					"query": "id=317&total=1&optionid=&selectDate=undefined",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/takeout/takeoutindex",
+					"pathName": "zh_cjdianc/pages/takeout/takeoutindex",
+					"query": "storeid=122",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/lingquan",
+					"pathName": "zh_cjdianc/pages/quan/lingquan",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/changce/article/list",
+					"pathName": "pages/changce/article/list",
+					"query": "cateid=13&index=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/yiye",
+					"pathName": "zh_cjdianc/pages/quan/yiye",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/seller/index",
+					"pathName": "zh_cjdianc/pages/seller/index",
+					"query": "scene=122",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjpt/pages/index/index",
+					"pathName": "zh_cjpt/pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjpt/pages/logs/zd_info",
+					"pathName": "zh_cjpt/pages/logs/zd_info",
+					"query": "id=56",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/quan/zijiyiye/zijiyiye",
+					"pathName": "zh_cjdianc/pages/quan/zijiyiye/zijiyiye",
+					"query": "scene=4263-120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/reserve/reserve",
+					"pathName": "zh_cjdianc/pages/reserve/reserve",
+					"query": "storeid=160",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/reserve/reserve",
+					"pathName": "zh_cjdianc/pages/reserve/reserve",
+					"query": "storeid=122",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/reserve/reserve",
+					"pathName": "zh_cjdianc/pages/reserve/reserve",
+					"query": "storeid=120",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"pathName": "zh_cjdianc/pages/sjzx/yqyy/yqyy",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "zh_cjdianc/pages/my/index",
+					"pathName": "zh_cjdianc/pages/my/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

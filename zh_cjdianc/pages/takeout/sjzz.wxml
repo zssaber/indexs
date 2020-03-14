@@ -1,0 +1,8 @@
+<view class="xztpul">
+	<view style="padding:10px 15px" wx:if="{{store.yyzz.length==0}}">
+		商家暂未上传资质
+	</view>
+	<block wx:else>
+		<image bindtap="previewzzImage" class="scimg" data-urls="{{store.yyzz}}" id="{{item}}" mode="widthFix" src="{{item}}" wx:for="{{store.yyzz}}" wx:key="*this"></image>
+	</block>
+</view>

@@ -1,0 +1,303 @@
+
+
+.ling {
+  font-size: 24rpx;
+  background: #FFB553;
+  padding: 0rpx 20rpx;
+  color: #fff;
+
+}
+
+.yiling {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+.tianjia{
+  width: 702rpx;
+  margin-left: 24rpx;
+  height: 78rpx;
+  background: #FFB553;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 50rpx;
+  line-height: 78rpx;
+  border-radius: 10rpx;
+  z-index: 9999999999999;
+}
+.swiper-tab {
+  background: #fff;
+  position: fixed;
+  padding: 0rpx 120rpx;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  color: #ccc;
+  z-index: 9999999999;
+  font-size: 28rpx;
+}
+.bili {
+  color: #FF7D5C;
+  font-size: 24rpx;
+
+}
+.qiaoxq{
+  display: flex;
+  align-items: center;
+}
+.bilis {
+  color: #FF7D5C;
+  font-size: 24rpx;
+}
+.swiper-tab-item {
+  padding: 0 20rpx;
+  color: #ccc;
+}
+
+.actives {
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-bottom: 4rpx solid #ff7d5c;
+}
+
+.youhui {
+  margin-top: 20rpx;
+  width: 702rpx;
+  margin-left: 24rpx;
+  position: relative;
+  height: 200rpx;
+}
+
+.youhui image {
+  position: absolute;
+  width: 100%;
+  height: 200rpx;
+}
+
+.ming {
+  position: absolute;
+  top: 7rpx;
+  z-index: 999;
+  left: 130rpx;
+  width: 370rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.mings {
+  position: absolute;
+  top: 30rpx;
+  z-index: 999;
+  left: 130rpx;
+  width: 370rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tss {
+  font-size: 24rpx;
+  font-family: Source Han Sans SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.qian {
+  position: absolute;
+  top: -10rpx;
+  z-index: 999;
+  right: 20rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.qians {
+  position: absolute;
+  top: 10rpx;
+  z-index: 999;
+  right: 20rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.fuua {
+  margin-top: 30rpx;
+  color: rgba(48, 49, 59, 1);
+  opacity: 0.6;
+}
+
+.tishi {
+  position: absolute;
+  width: 92%;
+  bottom: 10rpx;
+  z-index: 999;
+  left: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.xiaoti {
+  display: flex;
+}
+
+.mca {
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+  width: 300rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sj {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+  width: 370rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.jq {
+  font-size: 67rpx;
+  font-family: Roboto;
+  font-weight: bold;
+  color: rgba(55, 44, 45, 1);
+  opacity: 0.9;
+
+}
+
+.ts {
+  font-size: 24rpx;
+  font-family: Source Han Sans SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.main {
+  padding-top: 120rpx;
+}
+
+.sjhb {
+  padding: 20rpx 30rpx;
+}
+
+.sjhbtop {
+  background: #fff;
+  padding: 20rpx 30rpx;
+}
+
+.mdlogo {
+  margin-right: 20rpx;
+}
+
+.mdlogo image {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.yhname {
+  font-size: 24rpx;
+}
+
+.yhtype {
+  font-size: 22rpx;
+  width: 120rpx;
+  text-align: center;
+  border: 1rpx solid #E9453C;
+  border-radius: 10rpx;
+  color: #E9453C;
+}
+
+.bili {
+  color: #FF7D5C;
+
+}
+
+.yhtime {
+  font-size: 22rpx;
+  color: #666;
+}
+
+.yhtimes {
+  font-size: 22rpx;
+  color: #666;
+  display: flex;
+}
+
+.yhmoney {
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #E9453C;
+}
+
+.yhtj {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.flex-col {
+  justify-content: space-between;
+}
+
+.sjhbbtm {
+  border-top: 2rpx dashed #dddddd;
+  background: #fff;
+  padding: 15rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.sysm {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.qsy {
+  color: #E9453C;
+  font-size: 24rpx;
+}
+
+.hyuan1 {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  background: #f4f4f4;
+  border-radius: 50%;
+  left: -20rpx;
+  top: -20rpx;
+}
+
+.hyuan2 {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  background: #f4f4f4;
+  border-radius: 50%;
+  right: -20rpx;
+  top: -20rpx;
+}
+
+.butt {
+  position: absolute;
+  right: 0rpx;
+  bottom: -13rpx;
+  font-size: 26rpx;
+  color: #ffb553;
+  background: none;
+}
+
+button::after {
+  border: none;
+}

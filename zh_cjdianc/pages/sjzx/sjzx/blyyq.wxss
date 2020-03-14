@@ -1,0 +1,316 @@
+.head {
+  background: white;
+  padding: 15rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 26rpx;
+}
+
+.heads {
+  background: white;
+  padding: 15rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 26rpx;
+}
+
+.heada {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+
+.head .left {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 0 0 0 15px;
+}
+
+.head .right {
+  flex: 1;
+}
+
+.head .lefts {
+  width: 50%;
+  padding: 0rpx 20rpx;
+
+}
+
+.heads .leftss {
+  display: flex;
+  padding: 0rpx 20rpx;
+
+}
+
+.heads .rights {
+  width: 100%;
+  padding: 0rpx 20rpx;
+
+}
+
+.head .rights {
+  width: 50%;
+  padding: 0rpx 20rpx;
+
+}
+
+.heada .lefts {
+  width: 50%;
+  padding: 0rpx 20rpx;
+
+}
+
+.heada .leftss {
+  width: 60%;
+  padding: 0rpx 20rpx;
+
+}
+
+
+.heada .rights {
+  width: 50%;
+  padding: 0rpx 20rpx;
+
+}
+
+.weui-input {
+  height: 2.58823529em;
+  min-height: 2.58823529em;
+  line-height: 2.58823529em;
+  text-align: center;
+
+}
+
+.picker {
+  text-align: left;
+  color: #5c5a5a;
+}
+
+.jine {
+  display: flex;
+}
+
+.minc {
+  font-size: 28rpx;
+  width: 400rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.mincs {
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  width: 332rpx;
+}
+
+.mincss {
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  width: 280rpx;
+}
+
+.minca {
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.mincass {
+  font-size: 28rpx;
+  width: 145rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.place-holder {
+  font-size: 12px;
+}
+
+.weui-cell:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1rpx solid #d9d9d9;
+  color: #d9d9d9;
+  left: 115px;
+
+}
+
+
+.shurus {
+  display: flex;
+  border-bottom: 1rpx solid #E6E6E6;
+  color: #666666;
+  align-items: center;
+  margin-left: 20rpx;
+  justify-content: space-around;
+  height: 80rpx;
+}
+
+.shuru {
+  display: flex;
+  border-bottom: 1rpx solid #E6E6E6;
+  color: #666666;
+  width: 77%;
+  align-items: center;
+  margin-left: 20rpx;
+  justify-content: space-around;
+  height: 80rpx;
+}
+
+.yuan {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shijian {
+  padding: 0rpx 20rpx;
+  width: 100%;
+}
+
+.ril {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.weui-inputs {
+  height: 2.58823529em;
+  min-height: 2.58823529em;
+  line-height: 2.58823529em;
+  text-align: center;
+  width: 95%;
+
+}
+
+.weui-inputa {
+  height: 2.58823529em;
+  min-height: 2.58823529em;
+  line-height: 2.58823529em;
+  text-align: left;
+
+}
+
+.weui-label {
+  width: 105px;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: left;
+}
+
+.cweuie {
+  width: 77%;
+  height: 82rpx;
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #E6E6E6;
+  margin-left: 48rpx;
+}
+
+.pickers {
+  text-align: left;
+  color: #5c5a5a;
+  width: 100%;
+  padding-left: 20rpx;
+}
+
+.weui-textarea {
+  display: block;
+  width: 76%;
+  background: #F5F5F5;
+  border-radius: 1px;
+  margin-left: 52rpx;
+  margin-top: 35rpx;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+}
+
+.mincas {
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin-top: 35rpx;
+}
+
+.bttn {
+  width: 690rpx;
+  height: 75rpx;
+  background: rgba(255, 125, 92, 1);
+  border-radius: 10rpx;
+  color: #fff;
+}
+
+.headaa {
+  background: #fff;
+  padding-top: 40rpx;
+  padding-bottom: 50rpx;
+}
+
+button::after {
+  content: " ";
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+}
+
+.img {
+  width: 144rpx;
+  height: 144rpx;
+  border-radius: 50%;
+  border: 1rpx solid #E6E6E6;
+}
+
+.wenxin {
+  width: 100%;
+  background: #fff;
+  color: #666666;
+  font-size: 24rpx;
+  padding: 10rpx 20rpx;
+}
+
+.asda {
+  background: #F5F5F5;
+  padding: 10rpx 10rpx;
+  border-radius: 10rpx;
+}
+
+.asdas {
+  display: flex;
+  background: #F5F5F5;
+  padding: 10rpx 10rpx;
+  border-radius: 10rpx;
+}

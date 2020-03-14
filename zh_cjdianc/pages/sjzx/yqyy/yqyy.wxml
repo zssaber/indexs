@@ -1,0 +1,31 @@
+<form bindreset="formReset" bindsubmit="formSubmit" reportSubmit="true" wx:if="{{state==0}}">
+	<image class="bja" src="https://huanyucanguan.com/attachment/images/9/2020/01/XgpGdbGgsFepLsvrzl11R1zggXfOBW.png"></image>
+	<view class="bod">
+		<view class="asww">
+       <view class="shenqq" >异业申请</view> 
+			<view class="text_list">
+				<image class="img" src="../../../img/iphone.png"></image>
+				<view>
+					<input bindinput="code" name="name_tel" placeholder="请输入您的手机号" type="number" value="{{link_tel}}"></input>
+				</view>
+			</view>
+			<view class="xian"></view>
+			<view class="text_list">
+				<image class="img" src="../../../img/Lock.png"></image>
+				<view>
+					<input name="code" placeholder="请输入短信验证码" type="number"></input>
+					<view bindtap="sendmessg" class="code" wx:if="{{getmsg=='获取验证码'}}">{{getmsg}}</view>
+					<view class="code" style="color:#999;font-size:22rpx" wx:else>{{getmsg}}</view>
+				</view>
+			</view>
+		</view>
+		<button formType="submit" style="background:{{color}};color:#fff;width:640rpx;">立即申请成异业</button>
+	</view>
+ <view bindtap="tel" class="ft">
+    <view>客服电话：{{xtxx.tel}}</view>
+  </view>
+</form>
+<view class="aasdas" wx:if="{{state==2}}">
+	<image src="../../../img/tabdd.png"></image>
+	<view> 该链接已失效！</view>
+</view>

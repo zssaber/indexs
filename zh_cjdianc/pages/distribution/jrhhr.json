@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "成为推广员",
+    "usingComponents": {
+        "cardlist": "/zh_cjdianc/dist/cardlist/index"
+    }
+}

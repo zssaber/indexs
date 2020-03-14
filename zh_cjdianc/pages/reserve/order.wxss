@@ -1,0 +1,33 @@
+@import "../../../wuBaseWxss/7.wxss";
+
+@import "../wddd/order.wxss";
+
+.tab-bar {
+  background: #fff;
+  top: 0rpx;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+
+}
+.asdasd{
+  display: flex;
+}
+.ddbtn {
+  border: 1rpx solid #bbb;
+  background: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: inherit;
+  margin-left: 30rpx;
+  padding: 0 30rpx;
+  border-radius: 10rpx;
+}
+.tab-bar~.order-list {
+  padding-top: 118rpx;
+  padding-bottom: 115rpx;
+  padding: 0 24rpx;
+  margin-top: 112rpx;
+
+}

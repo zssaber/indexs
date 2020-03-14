@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "商品列表",
+  "navigationBarBackgroundColor": "#FF7D5C",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "cardlist": "/zh_cjdianc/dist/cardlist/index"
+  }
+}

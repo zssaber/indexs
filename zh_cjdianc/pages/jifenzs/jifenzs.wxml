@@ -1,0 +1,71 @@
+<view class="page">
+	<view class="coupon-detail">
+		<view class="coupon-detail-head">
+			<view class="coupon-detail-head-title">
+				<view class="title">{{list.store_name}}</view>
+				<view class="title">{{list.name}}</view>
+				<view class="subtitle">有效期: {{list.start_time}} {{list.end_time}}</view>
+			</view>
+			<view class="coupon-detail-head-info">
+				<view class="useprice">满{{list.full}}元减{{list.reduce}}元</view>
+				<view class="receive">
+					<button open-type="share" class='butt' wx:if="{{dis==0}}">立即分享</button>
+					<button bindtap="lingqu" class='butt' wx:if="{{dis==1}}">立即领取</button>
+					<button class='butt' wx:if="{{dis==3}}">已领取</button>
+					<button class='butt' wx:if="{{dis==4}}">自己不能领取</button>
+				</view>
+			</view>
+			<view class="coupon-detal-bot">
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+				<i></i>
+			</view>
+		</view>
+		<view class="coupon-detail-content">
+			<view class="coupon-detail-content-info">
+				<view class="coupon-detail-content-info-top">
+					<view class="title">使用说明</view>
+					<view class="text wxParse">
+						<template is="wxParse " data="{{wxParseData:wxParseData.nodes}} "></template>
+					</view>
+					<view class="text ">{{list.instruction}}</view>
+				</view>
+				<view class="coupon-detail-content-info-bot ">
+					<view class="title">使用限制</view>
+					<view class="text">{{list.is_hd==1?'只能在品质联盟使用':'只能在指定店铺使用'}}</view>
+					<view class="text" wx:if="{{list.type==1}}">只能外卖使用</view>
+					<view class="text" wx:if="{{list.type==2}}">只能堂食使用</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>

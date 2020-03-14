@@ -1,0 +1,13 @@
+
+<view bindtap="mdmfx" class="pa ba_ff mar_t list rel">
+    <image class="dis_in" mode="aspectFit" src="../../img/distribution/sa.png"></image>
+    <text class="dis_in fon_30">邀请好友</text>
+    <image class="ab ud" mode="aspectFill" src="../../img/blackjt.png"></image>
+</view>
+<view bindtap="yczz" class="zhezhao" hidden="{{fwxy}}"></view>
+<view class="fxmxy" hidden="{{fwxy}}">
+    <view class="fxmxyhd" style="background:{{color}}">请朋友扫码来下单获取佣金</view>
+    <view bindtap="previewimg" class="fxmxybd">
+        <image src="{{code}}"></image>
+    </view>
+</view>

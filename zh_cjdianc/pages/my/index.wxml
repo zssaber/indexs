@@ -1,0 +1,280 @@
+<include src="/zh_cjdianc/pages/commons/navbar/navbar.wxml"></include>
+<view bindtap="yczz" class="sq_screen" wx:if="{{hydl}}"></view>
+<view bindtap="yczzss" class="sq_screen" wx:if="{{userInfo.tel==''&&hysj==1}}"></view>
+<view class="sq_box" wx:if="{{userInfo.tel==''&&hysj==1}}">
+	<view class="sq_title">需要授权您的手机号</view>
+	<view class="sq_title1">为了提供更好的服务</view>
+	<view class="sq_title1">请在稍后的提示框中点击“允许”</view>
+	<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="btn_ok" style="color:#fff;background:{{color}}">我知道了</button>
+	<button bindtap="yczzss" class="btn_ok" style="color:#fff;background:{{color}}">不授权</button>
+</view>
+<view class="sq_box" wx:if="{{hydl}}">
+	<view class="sq_title">需要您的授权</view>
+	<view class="sq_title1">为了提供更好的服务</view>
+	<view class="sq_title1">请在稍后的提示框中点击“允许”</view>
+	<image src="../../img/sqimg.png"></image>
+	<button bindgetuserinfo="bindGetUserInfo" class="btn_ok" openType="getUserInfo" style="color:#fff;background:{{color}}">我知道了</button>
+</view>
+<view class="container">
+	<view class="font">
+		<view class="logs_header" style="background:#FF7D5C">
+			<view class="logs_img" wx:if="{{userInfo.ishy=='1'&&system.hygn=='1'&&system.is_hy=='1'}}">
+				<image class="logs_imgs" wx:if="{{avatarUrl}}" src="{{avatarUrl}}"></image>
+				<image class="huanggimg" mode="aspectFit" src="../../img/personal/huang.png"></image>
+				<view class="logs_name">
+					<view class="logs_name1 flex-row flex-y-center">
+						<view class="xingmin">{{userInfo.user_name}}</view>
+						<view class="cjhy flex-row flex-y-center">
+							<image mode="aspectFit" src="../../img/personal/huangg.png"></image>
+							<view>超级会员</view>
+						</view>
+					</view>
+					<view class="logs_user">
+						<image class="logs_tubiao" src="../../img/personal/shouji.png"></image>
+						<view class="logs_tel">{{userInfo.tel}}</view>
+					</view>
+					<view class="erweimas" bindtap="mdmfx" style="top: 62rpx;" wx:if="{{js==1&&userInfo.store_id>0}}">
+						<image src="../../img/erweima.png"></image>
+						<view class="ma">异业二维码</view>
+					</view>
+				</view>
+			</view>
+			<view class="logs_img" wx:else>
+				<image class="logs_imgs" wx:if="{{avatarUrl}}" src="{{avatarUrl}}"></image>
+				<view class="logs_name">
+					<view class="logs_name1">{{nickName}}</view>
+					<view class="logs_user">
+						<image class="logs_tubiao" src="../../img/personal/shouji.png"></image>
+						<view class="logs_tel">{{userInfo.tel}}</view>
+					</view>
+				</view>
+				<view class="erweima" bindtap="mdmfx" style="top: 62rpx;" wx:if="{{js==1&&userInfo.store_id>0}}">
+					<image src="../../img/erweima.png"></image>
+					<view class="ma">异业二维码</view>
+				</view>
+			</view>
+			<view class="headr">
+				<view class="logs_content">
+					<view bindtap="shouru" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/shouru.png"></image>
+						</view>
+						<view class="content_integral">收入</view>
+					</view>
+					<view bindtap="wallet" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/yue.png"></image>
+						</view>
+						<view class="content_integral">余额</view>
+					</view>
+					<view bindtap="lingquan" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/liq.png"></image>
+						</view>
+						<view class="content_integral">领券</view>
+					</view>
+					<view bindtap="wdyhq" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hongbao.png"></image>
+						</view>
+						<view class="content_integral">券包</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+
+
+		<view class="box">
+			<view class="dingdan">
+				<view bindtap="wodedingdan" class="content_left">
+					<view class="content_left1">
+						<image class="aatu" src="../../img/wodd.png"></image>
+					</view>
+					<view class="content_integral">我的订单</view>
+				</view>
+				<view bindtap="tuanduidingdan" class="content_left">
+					<view class="content_left1">
+						<image class="aatu" src="../../img/tudd.png"></image>
+					</view>
+					<view class="content_integral">团队订单</view>
+				</view>
+				<view bindtap="wodexiaji" class="content_left">
+					<view class="content_left1">
+						<image class="aatu" src="../../img/wotd.png"></image>
+					</view>
+					<view class="content_integral">我的团队</view>
+				</view>
+				<view class="content_left">
+					<view class="content_left1">
+						<image class="aatu" src="../../img/yqhy.png"></image>
+					</view>
+					<button open-type="share" class="content_integral">邀请好友</button>
+				</view>
+			</view>
+			<view class="dingdans">
+				<view class="sdaa">会员中心</view>
+				<view class="huiyuan">
+					<view bindtap="tzhy" class="content_left" wx:if="{{waimai.is_hy==1}}">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/hysj.png"></image>
+						</view>
+						<view class="content_integral">会员升级</view>
+					</view>
+					<view bindtap="" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/zsds.png"></image>
+						</view>
+						<button open-type='contact' class="content_integral">专属客服</button>
+					</view>
+					<view bindtap="ditui" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/dtwl.png"></image>
+						</view>
+						<view class="content_integral">地推物料</view>
+					</view>
+					<view bindtap="shangxueyuan" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/sxy.png"></image>
+						</view>
+						<view class="content_integral">商学院</view>
+					</view>
+					<view bindtap="xinshou" class="content_left" wx:if="{{waimai.is_hy==2}}">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/xsjc.png"></image>
+						</view>
+						<view class="content_integral">新手教程</view>
+					</view>
+				</view>
+				<view class="huiyuan">
+					<view bindtap="xinshou" class="content_left" wx:if="{{waimai.is_hy==1}}">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/xsjc.png"></image>
+						</view>
+						<view class="content_integral">新手教程</view>
+					</view>
+					<view bindtap="shequn" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/sqsc.png"></image>
+						</view>
+						<view class="content_integral">社群素材</view>
+					</view>
+					<view bindtap="youxuanshangjai" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/qqs.png"></image>
+						</view>
+						<view class="content_integral">商务合作</view>
+					</view>
+					<view bindtap="sjrz" class="content_left">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/sjrz.png"></image>
+						</view>
+						<view class="content_integral">商家入驻</view>
+					</view>
+					<view bindtap="qishou" class="content_left" wx:if="{{waimai.is_hy==2}}">
+						<view class="content_left1">
+							<image class="aatu" src="../../img/hyzx/wmrz.png"></image>
+						</view>
+						<view class="content_integral">骑手入口</view>
+					</view>
+				</view>
+			</view>
+
+			<view class="logs_seller">
+				<view bindtap="wdyy" class="logs_center">
+					<view class="logs_centerimg">
+						<image class="center_map" mode="aspectFit" src="../../img/seller/yysj.png"></image>
+						<view>预约订单</view>
+					</view>
+					<image class="center_img" src="../../img/blackjt.png"></image>
+				</view>
+				<view bindtap="wdsc" class="logs_center">
+					<view class="logs_centerimg">
+						<image class="center_map" mode="aspectFit" src="../../img/shouc.png"></image>
+						<view>我的收藏</view>
+					</view>
+					<image class="center_img" src="../../img/blackjt.png"></image>
+				</view>
+				<view bindtap="seller" class="logs_center">
+					<view class="logs_centerimg">
+						<image class="center_map" mode="aspectFit" src="../../img/dianyuan.png"></image>
+						<view>商家入口</view>
+					</view>
+					<image class="center_img" src="../../img/blackjt.png"></image>
+				</view>
+				<navigator class="logs_center" url="/zh_cjpt/pages/mine/zhuce" wx:if="{{waimai.is_hy==1}}">
+					<view class="logs_centerimg">
+						<image class="center_map" mode="aspectFit" src="../../img/qishous.png"></image>
+						<view>骑手入口</view>
+					</view>
+					<image class="center_img" src="../../img/blackjt.png"></image>
+				</navigator>
+				<!-- <view bindtap="lingquan" class="logs_center">
+					<view class="logs_centerimg">
+						<image class="center_map" mode="aspectFit" src="../../img/quan.png"></image>
+						<view>领券中心</view>
+					</view>
+					<image class="center_img" src="../../img/blackjt.png"></image>
+				</view> -->
+				<view bindtap="mdmfxs" class="logs_center">
+					<view class="logs_centerimg">
+						<image class="center_map" mode="aspectFit" src="../../img/yqq.png"></image>
+						<view>邀请好友二维码</view>
+					</view>
+					<image class="center_img" src="../../img/blackjt.png"></image>
+				</view>
+				<view bindtap="yiye" class="logs_center" wx:if="{{js==1&&userInfo.store_id>0}}">
+					<view class="logs_centerimg">
+						<image class="center_map" mode="aspectFit" src="../../img/yiye.png"></image>
+						<view>异业联盟领券中心</view>
+					</view>
+					<image class="center_img" src="../../img/blackjt.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view bindtap="yczz" class="zhezhao" hidden="{{fwxy}}"></view>
+<view class="fxmxy" hidden="{{fwxy}}">
+	<view class="fxmxyhd" style="background:#FF7D5C">请朋友扫码来领优惠券</view>
+	<view bindtap="previewimg" class="fxmxybd">
+		<image src="{{code}}"></image>
+	</view>
+</view>
+
+<view bindtap="yczzs" class="zhezhao" hidden="{{fwxys}}"></view>
+<view class="fxmxy" hidden="{{fwxys}}">
+	<view class="fxmxyhd" style="background:#FF7D5C">请朋友扫码来下单获取佣金</view>
+	<view bindtap="previewimgs" class="fxmxybd">
+		<image src="{{codes}}"></image>
+	</view>
+</view>
+
+
+<view class="navbar flex-row {{__device}}" style="height:115rpx;background: #fff; position: fixed;">
+	<navigator class="flex-grow-1 flex-y-center" openType="redirect" url="/zh_cjdianc/pages/index/index">
+		<view>
+			<image class="navbar-icon" src="/zh_cjdianc/img/tabindexs.png"></image>
+			<view class="navbar-text" style="color: #DDDDDD;">首页</view>
+		</view>
+	</navigator>
+	<navigator class="flex-grow-1 flex-y-center" openType="redirect" url="/pages/index/index">
+		<view>
+			<image class="navbar-icon" src="/zh_cjdianc/img/youxaund.png"></image>
+			<view class="navbar-text" style="color: #DDDDDD;">优选</view>
+		</view>
+	</navigator>
+	<navigator class="flex-grow-1 flex-y-center" openType="redirect" url="/zh_cjdianc/pages/wddd/order">
+		<view>
+			<image class="navbar-icon" src="/zh_cjdianc/img/tabdds.png"></image>
+			<view class="navbar-text" style="color: #DDDDDD;">订单</view>
+		</view>
+	</navigator>
+	<navigator class="flex-grow-1 flex-y-center" openType="redirect" url="/zh_cjdianc/pages/my/index">
+		<view>
+			<image class="navbar-icon" src="/zh_cjdianc/img/tabmyfs.png"></image>
+			<view class="navbar-text" style="color:#FA855B;">我的</view>
+		</view>
+	</navigator>
+</view>

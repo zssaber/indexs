@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "拼团",
+    "usingComponents": {
+        "cardlist": "/zh_cjdianc/dist/cardlist/index"
+    }
+}

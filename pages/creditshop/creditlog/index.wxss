@@ -1,0 +1,229 @@
+.total {
+  height: 195rpx;
+  background: #fff;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20rpx;
+}
+input{ font-size: 26rpx; border: 2rpx solid #f0f0f0; padding-left: 10rpx;}
+.total .title {
+  font-size: 26rpx;
+  line-height: 48rpx;
+  color: #999;
+}
+
+.total .num {
+  font-size: 44rpx;
+  line-height: 60rpx;
+  color: #f55;
+  font-weight: 600;
+}
+
+.record {
+  width: 100%;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.record .item {
+  padding: 30rpx 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.item-label {
+  width: 60%;
+}
+
+.item-label .name {
+  font-size: 26rpx;
+  color: #000;
+  line-height: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-label .date {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 1;
+  margin-top: 20rpx;
+}
+
+.item-remark {
+  color: #999;
+  font-size: 26rpx;
+}
+
+.record .item:after {
+  content: " ";
+  position: absolute;
+  left: 24rpx;
+  right: 24rpx;
+  bottom: -1rpx;
+  height: 1px;
+  border-bottom: 1px solid #ebebeb;
+  color: #d9d9d9;
+  transform-origin: 0 0;
+  transform: scaleY(0.5);
+}
+
+.modalDlg {
+  width: 70%;
+  position: fixed;
+  top: 350rpx;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.windowRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 110rpx;
+  width: 100%;
+}
+
+.back {
+  text-align: center;
+  color: #f90;
+  font-size: 30rpx;
+  margin: 30rpx;
+}
+
+.userTitle {
+  font-size:28rpx;
+  color: black;
+  margin: 30rpx;
+}
+
+.wishName {
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 30rpx;
+}
+
+.wish_put {
+  width: 80%;
+  border: 1px solid;
+  border-radius: 10rpx;
+  padding-left: 10rpx;
+}
+
+.wishbnt {
+  width: 100%;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.wishbnt_bt {
+  width: 50%;
+  background-color: #f90;
+  color: white;
+  font-size: 30rpx;
+  border: 0;
+}
+
+.wishbnt_bt::after {
+  width: 50%;
+  color: #fbf1e8;
+  font-size: 30rpx;
+  border: 0;
+}
+
+.btns {
+  border: 1rpx solid #f90;
+  color: rgb(99, 99, 99);
+  height: 60rpx;
+  margin-top: 10rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+}
+
+.btns::after {
+  border: none;
+}
+
+button {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 14px;
+  padding-right: 14px;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 2.55555556;
+  border-radius: 5px;
+  -webkit-tap-highlight-color: transparent;
+  overflow: hidden;
+  color: #000;
+  background-color: #fff;
+}
+
+.xunz {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1rpx solid #d9d9d9;
+}
+
+.lift {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  border-right: 1rpx solid #d9d9d9;
+}
+
+.lifts {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.bttnn {
+  width: 100%;
+  font-size: 28rpx;
+  height: 70rpx;
+  color: black;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.is_checked {
+  color: #f90;
+  background: #fff;
+}
+
+.bag {
+  width: 750rpx;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  top: 0;
+  position: fixed;
+  z-index: 99999;
+}

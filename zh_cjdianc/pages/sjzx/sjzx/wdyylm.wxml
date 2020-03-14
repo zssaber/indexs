@@ -1,0 +1,26 @@
+<!-- <view class="head ba_f">
+    <view bindtap="one" class="{{ac_index==0?'sele':'no_sele'}}" style="border-color:{{ac_index==0?color:''}}">一级</view>
+</view> -->
+<view class="list mar_t ba_f">
+	<view class="pa" wx:for="{{MyTeam}}" wx:key="key">
+		<view class="liex">
+			<view class="toux">
+				<image class="dis_in" mode="aspectFill" src="{{item.img}}"></image>
+			</view>
+			<view class="dis_in">
+				<view class="tel">
+					<view class="fon_30 color_6 wenzib">{{item.name}}</view>
+					<view class="fon_30 color_6">{{item.tel}}</view>
+				</view>
+				<view class="fon_24 color_9 pa_0" style="padding:0rpx;font-size: 28rpx;">推广订单量: {{item.ordernum}}</view>
+				<view class="fon_24 color_9 pa_0" style="padding:0rpx">成为异业时间 {{item.yy_time}}</view>
+
+			</view>
+		</view>
+	</view>
+</view>
+<view class="jzwb" wx:if="{{ac_index==0&&MyTeam.length==0}}">
+	<view class="hx"></view>
+	<view class="wz">您暂无异业联盟哦~</view>
+	<view class="hx"></view>
+</view>

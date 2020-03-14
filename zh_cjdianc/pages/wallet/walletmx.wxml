@@ -1,0 +1,93 @@
+<view class="sxlb">
+  <view bindtap="chosetype" class="sxlbv" style="color:{{selecttype?color:''}};border-bottom:{{selecttype?2:'0'}}rpx solid {{color}}">
+    <view>{{typename}}</view>
+    <image class="{{selecttype?'xs':'xx'}}" src="../../img/down1.png"></image>
+  </view>
+  <view bindtap="chosedate" class="sxlbv" style="color:{{selectdate?color:''}};border-bottom:{{selectdate?2:'0'}}rpx solid {{color}}">
+    <view>日期范围</view>
+    <image class="{{selectdate?'xs':'xx'}}" src="../../img/down1.png"></image>
+  </view>
+  <view class="sorting-list {{!selecttype?' chioce-list-hide':' chioce-list-show'}}">
+    <view bindtap="xztype" class="sorting-item " data-index="{{index}}" wx:for="{{datetype}}" wx:key="key">{{item}}</view>
+  </view>
+  <view class="sorting-list {{!selectdate?' chioce-list-hide':' chioce-list-show'}}">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">起始日期</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="bindTimeChange" end="" mode="date" start="" value="{{timestart}}">
+          <view class="weui-input">{{timestart}}</view>
+        </picker>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">结束日期</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker bindchange="bindTimeChange1" end="" mode="date" start="" value="{{timeend}}">
+          <view class="weui-input">{{timeend}}</view>
+        </picker>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+    <view class="datebtn">
+      <button catchtap="repeat" class="jjjd" data-id="{{oitem.id}}">重置</button>
+      <button catchtap="find" data-id="{{oitem.id}}" style="background:{{color}};color: #fff;">查找</button>
+    </view>
+  </view>
+</view>
+
+<view class="no_coupons" wx:if="{{score==null||score==''}}" style="margin-top: 100rpx;">
+  <view class="noe_coupons_img">
+    <image mode="aspectFit" src="../../img/list.png"></image>
+    您暂无相关交易明细
+  </view>
+</view>
+<view wx:else style="margin-top: 100rpx;">
+  <view class="integral" wx:for="{{score}}" wx:key="key">
+    <view class="integral-lefts">
+      <image mode="widthFix" wx:if="{{item.logo!=null}}" src="{{item.logo}}"></image>
+      <image mode="widthFix" wx:if="{{item.note=='购买会员'}}" src="../../img/huiyuan.png"></image>
+      <image mode="widthFix" wx:if="{{item.note=='后台充值'}}" src="../../img/houtaichong.png"></image>
+      <view class="integral-left">
+        <view class="touasa">
+          <view class="shangsdd">
+            <view wx:if="{{item.name!=null}}">{{item.name}}</view>
+            <view class="{{item.name!=null?'leixin':'leixins'}}">{{item.note}}</view>
+          </view>
+          <view wx:if="{{item.type==1}}" style="color:#333333">+{{item.money}}</view>
+          <view wx:if="{{item.type==2}}" style="color:#333333">-{{item.money}}</view>
+        </view>
+        <view wx:if="{{item.order_num!=null}}" class="dindan">点单号{{item.order_num}}</view>
+
+        <view class="dixia">
+          <view class="dindan">{{item.time}}</view>
+          <view wx:if="{{item.type==1}}" class="zhifu">
+            <text class="zhifufss" wx:if="{{item.pay_type==1}}">微信支付</text>
+            <text class="zhifufs" wx:if="{{item.pay_type==2}}">余额支付</text>
+            <text class="zhifufs" wx:if="{{item.pay_type==3}}">积分支付</text>
+            <text class="zhifufs" wx:if="{{item.pay_type==4}}">货到付款</text>
+            <text class="zhifufsss" wx:if="{{item.pay_type==5}}">储值卡支付</text>
+            <text class="zhifufss" wx:if="{{item.note=='购买会员'}}">微信支付</text>
+            <text class="zhifufs" wx:if="{{item.note=='后台充值'}}">后台充值</text>
+          </view>
+          <view wx:if="{{item.type==2}}" class="zhifu">
+            <text class="zhifufss" wx:if="{{item.pay_type==1}}">微信支付</text>
+            <text class="zhifufs" wx:if="{{item.pay_type==2}}">余额支付</text>
+            <text class="zhifufs" wx:if="{{item.pay_type==3}}">积分支付</text>
+            <text class="zhifufs" wx:if="{{item.pay_type==4}}">货到付款</text>
+            <text class="zhifufsss" wx:if="{{item.pay_type==5}}">储值卡支付</text>
+            <text class="zhifufss" wx:if="{{item.note=='购买会员'}}">微信支付</text>
+            <text class="zhifufs" wx:if="{{item.note=='后台充值'}}">后台充值</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="integral-right">
+    </view>
+  </view>
+  <view class="mygd">没有更多了哦~</view>
+</view>

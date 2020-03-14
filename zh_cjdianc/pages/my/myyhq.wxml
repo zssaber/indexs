@@ -1,0 +1,143 @@
+<view class="list_header" style="background-color:#FF7D5C;">
+	<view bindtap="tabClick" class="list_title {{activeIndex==index?'selsect':'default'}}" id="{{index}}" wx:for="{{tabs}}" wx:key="key">
+		<view>{{item}}</view>
+		<view class="list_border" hidden="{{activeIndex!=index}}"></view>
+	</view>
+</view>
+<view class="main">
+	<block wx:if="{{activeIndex==0}}">
+		<view class="sjhb" wx:for="{{ptarr}}" wx:key="key">
+			<view class="sjhbtop flex-row flex-y-center">
+				<view class="flex-grow-1 flex-col">
+					<view class="flex-grow-1 yhname">{{item.name}}</view>
+					<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='1'}}">店外可用</view>
+					<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='2'}}">堂食可用</view>
+					<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='3'}}">堂食店外</view>
+					<view class="flex-grow-1 yhtime">有效期至：{{item.end_time}}</view>
+					<view class="flex-grow-1 yhtimes" wx:if="{{item.couponnum>=0}}">剩余：{{item.couponnum==0?'1':item.couponnum}}张
+						<view class="bili" wx:if="{{item.commission>0||item.commission_td>0}}">{{item.commission==0?'实付返佣：':'优惠券返佣：'}}
+							{{item.commission==0?item.commission_td:item.commission}}{{item.commission==0?'%':'元'}}</view>
+					</view>
+				</view>
+				<view class="flex-grow-0 flex-col flex-y-center">
+					<view class="flex-grow-1 yhmoney">￥{{item.reduce}}</view>
+					<view class="flex-grow-1 yhtj">满{{item.full}}可用</view>
+				</view>
+			</view>
+			<view class="sjhbbtm">
+				<view class="hyuan1"></view>
+				<view class="hyuan2"></view>
+				<view class="flex-grow-1 sysm">{{item.instruction}},
+					<button wx:if="{{item.category==3}}" data-qid="{{item.id}}" open-type="share" class="butt" style="position: absolute;bottom: 0rpx;">去分享></button>
+					<text wx:if="{{item.type_name.length>0}}">限<text wx:for="{{item.type_name}}" wx:key="key">{{item}},</text>类商家使用。</text>
+				</view>
+			</view>
+		</view>
+		<view class="list_imgbk2" wx:if="{{ptarr.length==0}}">
+			<image class="list_imgbk" src="../../img/list.png"></image>
+			<view class="list_imgbk3" style="margin-top:-10rpx;">您暂时还没有平台红包哦！</view>
+		</view>
+	</block>
+	<block wx:if="{{activeIndex==1}}">
+		<view class="sjhb" wx:for="{{sjarr}}" wx:key="key">
+			<view class="sjhbtop flex-row flex-y-center">
+				<view class="mdlogo flex-row flex-y-center">
+					<image src="{{item.logo}}"></image>
+				</view>
+				<view class="flex-grow-1 flex-col">
+					<view class="flex-grow-1 yhname">{{item.store_name}}</view>
+					<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='1'}}">店外可用</view>
+					<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='2'}}">堂食可用</view>
+					<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='3'}}">堂食店外</view>
+					<view class="flex-grow-1 yhtime">有效期至：{{item.end_time}}</view>
+					<view class="flex-grow-1 yhtimes" wx:if="{{item.couponnum>=0}}">剩余：{{item.couponnum==0?'1':item.couponnum}}张
+					<view wx:if="{{item.uid<=0}}">
+						<view class="bili" wx:if="{{item.commission>0||item.commission_td>0}}">{{item.commission==0?'实付返佣：':'优惠券返佣：'}}
+							{{item.commission==0?item.commission_td:item.commission}}{{item.commission==0?'%':'元'}}</view>
+					</view>
+					</view>
+				</view>
+				<view class="flex-grow-0 flex-col flex-y-center">
+					<view class="flex-grow-1 yhmoney">￥{{item.reduce}}</view>
+					<view class="flex-grow-1 yhtj">满{{item.full}}可用</view>
+				</view>
+			</view>
+			<view class="sjhbbtm">
+				<view class="hyuan1"></view>
+				<view class="hyuan2"></view>
+				<view class="flex-grow-1 sysm">{{item.instruction}}</view>
+				<button data-qid="{{item.id}}" open-type="share" class="butt" style="position: absolute;right:122rpx;bottom: 0rpx;">去分享></button>
+				<view bindtap="qsy" class="flex-grow-0 qsy" data-sjid="{{item.store_id}}">去使用></view>
+			</view>
+		</view>
+		<view class="list_imgbk2" wx:if="{{sjarr.length==0}}">
+			<image class="list_imgbk" src="../../img/list.png"></image>
+			<view class="list_imgbk3" style="margin-top:-10rpx;">您暂时还没有商家红包哦！</view>
+		</view>
+	</block>
+
+	<block wx:if="{{activeIndex==3}}">
+		<view class="sjhb" wx:for="{{yyyhq}}" wx:key="key">
+			<view class="sjhbtop flex-row flex-y-center">
+				<view class="mdlogo flex-row flex-y-center">
+					<image src="{{item.logo}}"></image>
+				</view>
+				<view class="flex-grow-1 flex-col">
+					<view class="flex-grow-1 yhname">{{item.store_name}}</view>
+					<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='1'}}">店外可用</view>
+					<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='2'}}">堂食可用</view>
+					<view class="flex-grow-1 yhtype" wx:if="{{item.coupon_type=='3'}}">堂食店外</view>
+					<view class="flex-grow-1 yhtime">有效期至：{{item.end_time}} </view>
+					<view class="flex-grow-1 yhtimes" wx:if="{{item.couponnum==-1}}">无限张
+						<view class="bili" wx:if="{{item.commission>0||item.commission_td>0}}">{{item.commission==0?'实付返佣：':'优惠券返佣：'}}
+							{{item.commission==0?item.commission_td:item.commission}}{{item.commission==0?'%':'元'}}</view>
+					</view>
+					<view class="flex-grow-1 yhtimes" wx:if="{{item.couponnum>=0}}">剩余：{{item.couponnum==0?'1':item.couponnum}}张
+						<view class="bili" wx:if="{{item.commission>0||item.commission_td>0}}">{{item.commission==0?'实付返佣：':'优惠券返佣：'}}
+							{{item.commission==0?item.commission_td:item.commission}}{{item.commission==0?'%':'元'}}</view>
+					</view>
+				</view>
+				<view class="flex-grow-0 flex-col flex-y-center">
+					<view class="flex-grow-1 yhmoney">￥{{item.reduce}}</view>
+					<view class="flex-grow-1 yhtj">满{{item.full}}可用</view>
+				</view>
+			</view>
+			<view class="sjhbbtm">
+				<view class="hyuan1"></view>
+				<view class="hyuan2"></view>
+				<view class="flex-grow-1 sysm">{{item.instruction}}</view>
+				<button data-qid="{{item.ucid}}" open-type="share" class="butt" style="position: absolute;right:122rpx;bottom: 0rpx;">去分享></button>
+				<view bindtap="qsy" class="flex-grow-0 qsy" data-sjid="{{item.store_id}}">去使用></view>
+			</view>
+		</view>
+		<view class="list_imgbk2" wx:if="{{yyyhq.length==0}}">
+			<image class="list_imgbk" src="../../img/list.png"></image>
+			<view class="list_imgbk3" style="margin-top:-10rpx;">您暂时还没有异业优惠券哦！</view>
+		</view>
+	</block>
+
+	<block wx:if="{{activeIndex==2}}">
+		<view class="sjhb" wx:for="{{list}}" wx:key="key">
+			<view class="sjhbtop flex-row flex-y-center">
+				<view class="flex-grow-1 flex-col">
+					<view class="flex-grow-1 yhname">{{item.couponname}}</view>
+					<view class="flex-grow-1 yhtype">商城可用</view>
+					<view class="flex-grow-1 yhtime">有效期至：{{item.timestr}}</view>
+				</view>
+				<view class="flex-grow-0 flex-col flex-y-center">
+					<view class="flex-grow-1 yhmoney">￥{{item.deduct}}</view>
+					<view class="flex-grow-1 yhtj">满{{item.enough}}可用</view>
+				</view>
+			</view>
+			<view class="sjhbbtm">
+				<view class="hyuan1"></view>
+				<view class="hyuan2"></view>
+				<view class="flex-grow-1 sysm">{{item.title2}}</view>
+			</view>
+		</view>
+		<view class="list_imgbk2" wx:if="{{list.length==0}}">
+			<image class="list_imgbk" src="../../img/list.png"></image>
+			<view class="list_imgbk3" style="margin-top:-10rpx;">您暂时还没有优选商城红包哦！</view>
+		</view>
+	</block>
+</view>

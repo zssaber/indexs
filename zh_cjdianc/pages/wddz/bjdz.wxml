@@ -1,0 +1,53 @@
+<form bindreset="formReset" bindsubmit="formSubmit">
+  <view class="bottom-bar btn">
+    <button class="weui-btn" formType="submit">保存</button>
+  </view>
+  <view>
+    <view class="flex-row flex-y-center edit-row">
+      <view class="flex-grow-0 row-label">收货人</view>
+      <view class="flex-grow-1">
+        <input name="name" placeholder="姓名" value="{{name}}"></input>
+      </view>
+      <view class="flex-grow-0">
+        <radio-group bindchange="radioChange" class="radio-group" name="radiogroup">
+          <label class="radio" wx:for="{{items}}" wx:key="key">
+            <radio checked="{{item.checked}}" color="#5B9BFF" value="{{item.value}}"></radio>{{item.name}}
+          </label>
+        </radio-group>
+      </view>
+    </view>
+    <view class="flex-row flex-y-center edit-row">
+      <view class="flex-grow-0 row-label">联系电话</view>
+      <view class="flex-grow-1">
+        <input name="mobile" placeholder="手机号码" type="number" value="{{mobile}}"></input>
+      </view>
+    </view>
+    <view class="flex-row flex-y-center edit-row">
+      <view class="flex-grow-0 row-label">所在地区</view>
+      <view class="flex-grow-1 flex-row">
+        <view class="flex-grow-1" style="text-align: right;">
+          <picker bindchange="bindRegionChange" mode="region" name="picker" value="{{region}}">
+            <view class="weui-select weui-select_in-select-after">{{region[0]}}{{region[1]}}{{region[2]}}</view>
+          </picker>
+        </view>
+        <view class="flex-grow-0 flex-y-center">
+        </view>
+      </view>
+    </view>
+    <view class="flex-row flex-y-center edit-row" style="height:150rpx;">
+      <view class="flex-grow-0 row-label">
+        <view>地址</view>
+      </view>
+      <view class="flex-grow-1" bindtap="dingwei">
+        <textarea name="detail" disabled="true" placeholder="点击地图选择" style="height:120rpx;width:450rpx;" value="{{detail}}"></textarea>
+      </view>
+      <image bindtap="dingwei" class="dt" src="../../img/location1.png"></image>
+    </view>
+    <view class="flex-row flex-y-center edit-row">
+      <view class="flex-grow-0 row-label">门牌号</view>
+      <view class="flex-grow-1">
+        <input name="mph" placeholder="例：5号楼 503室" value="{{mobile}}"></input>
+      </view>
+    </view>
+  </view>
+</form>

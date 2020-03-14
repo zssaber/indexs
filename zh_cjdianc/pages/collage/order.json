@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "我的团",
+    "usingComponents": {
+        "cardlist": "/zh_cjdianc/dist/cardlist/index"
+    }
+}

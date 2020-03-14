@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "入驻申请",
+    "usingComponents": {
+        "cardlist": "/zh_cjdianc/dist/cardlist/index"
+    }
+}

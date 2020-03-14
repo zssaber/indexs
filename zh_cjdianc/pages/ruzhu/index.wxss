@@ -1,0 +1,114 @@
+page {
+  background: #fff;
+}
+
+.head {
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  color: #333;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.head>text:nth-child(2) {
+  font-weight: bold;
+}
+
+.pt_jj {
+  padding: 60rpx 30rpx;
+  font-size: 26rpx;
+  color: #999;
+  line-height: 45rpx;
+}
+
+.process {
+  padding: 35rpx;
+}
+
+.process>view:nth-child(1) {
+  text-align: center;
+  font-size: 35rpx;
+  color: #3c3c3c;
+}
+
+button {
+  background: #fff;
+  color: #fff;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  width: 92%;
+  margin-top: 50rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.rzlc {
+  margin-top: 60rpx;
+}
+
+.rzitem1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rzitem {
+  width: 100%;
+  display: flex;
+  height: 163rpx;
+  flex-direction: rpw;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 35rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 1rpx 10rpx 0rpx rgba(200, 200, 200, 0.5);
+  border-radius: 10rpx;
+  padding: 30rpx;
+}
+
+.rzlc image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.rzitem1 image {
+  width: 22rpx;
+  height: 23rpx;
+  margin-top: 16rpx;
+  margin-bottom: 16rpx
+}
+
+.flex-x-center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.ziai {
+  font-size: 28rpx;
+  color: rgba(153, 153, 153, 1);
+  width: 300rpx;
+}
+
+.asdass {
+  display: flex;
+  align-items: center;
+  width: 235rpx;
+  font-size: 32rpx;
+  color: rgba(51, 51, 51, 1);
+  justify-content: space-between;
+}

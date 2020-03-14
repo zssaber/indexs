@@ -1,0 +1,423 @@
+{
+  "pages": [
+    "zh_cjdianc/pages/Liar/loginindex",
+    "zh_cjdianc/pages/car/car",
+    "zh_cjdianc/pages/car/xydtl",
+    "zh_cjdianc/pages/wddz/bjdz",
+    "zh_cjdianc/pages/wddz/xzdz",
+    "zh_cjdianc/pages/wddz/xuanz",
+    "zh_cjdianc/pages/wddd/order",
+    "zh_cjdianc/pages/wddd/ddxq",
+    "zh_cjdianc/pages/wddd/pjdd",
+    "zh_cjdianc/pages/Liar/Liar",
+    "zh_cjdianc/pages/takeout/takeoutindex",
+    "zh_cjdianc/pages/takeout/takeoutform",
+    "zh_cjdianc/pages/takeout/note",
+    "zh_cjdianc/pages/takeout/sjzz",
+    "zh_cjdianc/pages/hyk/hyk",
+    "zh_cjdianc/pages/hyk/kthy",
+    "zh_cjdianc/pages/quan/lingquan",
+    "zh_cjdianc/pages/quan/yiye",
+    "zh_cjdianc/pages/quan/dainjia/dainjia",
+    "zh_cjdianc/pages/quan/zijiyiye/zijiyiye",
+    "zh_cjdianc/pages/jifenzs/jifenzs",
+    "pages/custom/index",
+    "pages/public/coupon/index",
+    "pages/message/auth/index"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序基于定位的数据显示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#fff"
+  },
+  "subPackages": [
+    {
+      "root": "zh_cjdianc/pages/ruzhu/",
+      "pages": [
+        "index",
+        "info",
+        "xieyi"
+      ]
+    },
+    {
+      "root": "pages/index/",
+      "pages": [
+        "index"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/wallet/",
+      "pages": [
+        "wallet",
+        "walletmx",
+        "storecz",
+        "jiayiminxi",
+        "walletadd"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/index/",
+      "pages": [
+        "index",
+        "pfl",
+        "sssj"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/reserve/",
+      "pages": [
+        "reserve",
+        "reserveinfo",
+        "order",
+        "reservetime"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/my/",
+      "pages": [
+        "index",
+        "kfzx",
+        "bzzx",
+        "yqinhy",
+        "myyhq",
+        "wodetuandui"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/smdc/",
+      "pages": [
+        "smdcindex",
+        "smdcform",
+        "getdl",
+        "drdc",
+        "sharedrdc",
+        "smdcxgsp"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/integral/",
+      "pages": [
+        "integralinfo/integralinfo",
+        "record/record",
+        "integral",
+        "myintegral"
+      ]
+    },
+    {
+      "root": "pages/shop/",
+      "pages": [
+        "notice/index/index",
+        "notice/detail/detail",
+        "caregory/index"
+      ]
+    },
+    {
+      "root": "pages/sale/coupon/",
+      "pages": [
+        "index/index",
+        "detail/index",
+        "my/detail/index",
+        "my/index/index",
+        "my/showcoupons2/index"
+      ]
+    },
+    {
+      "root": "pages/goods/",
+      "pages": [
+        "index/index",
+        "region/index",
+        "detail/index",
+        "package/index",
+        "package/detail/index",
+        "poster/poster"
+      ]
+    },
+    {
+      "root": "pages/changce/",
+      "pages": [
+        "merch/index",
+        "merch/detail",
+        "merch/intro",
+        "merch/apply",
+        "article/list",
+        "article/detail",
+        "sign/index",
+        "sign/records"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/sjzx/",
+      "pages": [
+        "login",
+        "wmdd/wmdd",
+        "wmdd/wmddxq",
+        "sjzx/dpsz",
+        "sjzx/sjzl",
+        "sjzx/sjzx",
+        "sjzx/wytx",
+        "sjzx/txmx",
+        "sjzx/yhqgl",
+        "sjzx/blyyq",
+        "sjzx/wdyylm",
+        "sjtj/sjtj",
+        "spgl/cplb",
+        "spgl/bjcp",
+        "spgl/spfl",
+        "hx",
+        "qghx",
+        "dndd/dndd",
+        "dndd/dnddlb",
+        "dndd/dnddxq",
+        "dndd/dmfdd",
+        "dndd/pdlb",
+        "dndd/pdfl",
+        "dndd/pdxq",
+        "dndd/qgdd",
+        "dndd/yydd",
+        "yqyy/yqyy",
+        "sjzx/note"
+      ]
+    },
+    {
+      "root": "zh_cjpt/pages/",
+      "pages": [
+        "mine/zhuce",
+        "BLE/index",
+        "logs/order_info",
+        "index/index",
+        "logs/tab",
+        "logs/day_order",
+        "logs/logs",
+        "logs/zj",
+        "mine/index",
+        "distribution/core",
+        "distribution/distribution",
+        "Invitation/index",
+        "logs/bill",
+        "logs/reward",
+        "logs/capital",
+        "index/order_info",
+        "index/info",
+        "logs/xx",
+        "tabbar/index",
+        "logs/tixian",
+        "distribution/downline",
+        "distribution/ranking",
+        "distribution/tixian",
+        "distribution/detaulted",
+        "distribution/detault",
+        "Invitation/info",
+        "mine/uppaword",
+        "distribution/index",
+        "mine/rz",
+        "route/index",
+        "logs/tx_info",
+        "logs/zd_info",
+        "logs/help",
+        "logs/abnormal"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/distribution/",
+      "pages": [
+        "core",
+        "distribution",
+        "downline",
+        "ranking",
+        "tixian",
+        "detaulted",
+        "detault",
+        "index",
+        "jrhhr"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/seller/",
+      "pages": [
+        "index",
+        "indextakeout",
+        "infomation",
+        "fukuan",
+        "getnum",
+        "getnumdl"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/xsqg/",
+      "pages": [
+        "xsqg",
+        "xsqgxq",
+        "qgform",
+        "order",
+        "yqgyh"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/collage/",
+      "pages": [
+        "group",
+        "qgform",
+        "yz_code",
+        "order",
+        "list",
+        "index",
+        "collageInfo",
+        "order_info"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/extra/",
+      "pages": [
+        "sgstore",
+        "wdsc",
+        "gsmy",
+        "weburl"
+      ]
+    },
+    {
+      "root": "zh_cjdianc/pages/qd/",
+      "pages": [
+        "qd",
+        "pm"
+      ]
+    },
+    {
+      "root": "pages/bargain",
+      "pages": [
+        "index/index",
+        "detail/detail",
+        "rule/rule",
+        "act/act",
+        "bargain/bargain",
+        "purchase/purchase"
+      ]
+    },
+    {
+      "root": "pages/quickbuy/",
+      "pages": [
+        "quickbuy/shop_index/shop_index"
+      ]
+    },
+    {
+      "root": "seckill",
+      "pages": [
+        "pages/index/index"
+      ]
+    },
+    {
+      "root": "dividend",
+      "pages": [
+        "pages/index/index",
+        "pages/down/index",
+        "pages/withdraw/index",
+        "pages/order/index",
+        "pages/log/index",
+        "pages/log/detail/index",
+        "pages/apply/index",
+        "pages/register/index"
+      ]
+    },
+    {
+      "root": "pages/groups/",
+      "pages": [
+        "index/index",
+        "category/index",
+        "mygroups/index",
+        "goods/index",
+        "order/index",
+        "confirm/index",
+        "rules/index",
+        "groups_detail/index",
+        "join/index",
+        "jointeam/index",
+        "order_detail/index",
+        "pay/index",
+        "refund/index",
+        "express/index",
+        "express/number"
+      ]
+    },
+    {
+      "root": "pages/commission/",
+      "pages": [
+        "poster/index",
+        "qrcode/index",
+        "index",
+        "log/index",
+        "log/detail",
+        "down/index",
+        "apply/index",
+        "withdraw/index",
+        "order/index",
+        "register/index",
+        "return/index"
+      ]
+    },
+    {
+      "root": "pages/member/",
+      "pages": [
+        "index/index",
+        "info/index",
+        "bind/index",
+        "recharge/index",
+        "withdraw/index",
+        "log/index",
+        "address/index",
+        "address/post",
+        "address/select",
+        "cart/index",
+        "membercard/index",
+        "membercard/detail/index",
+        "membercard/pay/index",
+        "avatarCropper/avatarCropper"
+      ]
+    },
+    {
+      "root": "pages/order/",
+      "pages": [
+        "index",
+        "detail/index",
+        "express/index",
+        "comment/index",
+        "refund/index",
+        "create/index",
+        "store/index",
+        "store/map",
+        "pay/index",
+        "pay/share/share",
+        "pay/coupons/coupons",
+        "cycle/index",
+        "cycle/address",
+        "cycle/order",
+        "express/number"
+      ]
+    },
+    {
+      "root": "pages/creditshop/",
+      "pages": [
+        "log/index",
+        "log/detail/index",
+        "lists/index",
+        "creditlog/index",
+        "create/index",
+        "verify/index",
+        "index",
+        "detail/index",
+        "comment/index",
+        "express/index"
+      ]
+    }
+  ],
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

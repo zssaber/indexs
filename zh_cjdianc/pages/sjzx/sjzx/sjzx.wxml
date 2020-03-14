@@ -1,0 +1,104 @@
+<include src="/zh_cjdianc/pages/commons/navbar/navbar.wxml"></include>
+<view class="head flex-col flex-y-center">
+	<image class="bgbg" mode="aspectFill" src="../../../img/seller/bj.png"></image>
+	<image class="headimage" mode="aspectFill" src="{{storeinfo.store.logo}}"></image>
+	<view class="name">{{storeinfo.store.name}}</view>
+	<view class="name">到期时间：{{storeinfo.store.rzdq_time}}</view>
+	<view class="ahashs">
+	<view class="name">剩余短信：{{storeinfo.store.note_num}}条</view>
+	<navigator class="weui-cellss" url="note">充值短信</navigator>
+	</view>
+	
+	<!-- <view class="sycs">
+		<view>订单提醒可用</view>
+		<view class="sycsv1">
+			<image class="sycsimage" src="../../../img/seller/five1.png"></image>
+			<view>{{sycs}}次</view>
+		</view>
+	</view> -->
+</view>
+<view class="weui-cells weui-cells_after-title" style="margin-top:0">
+	<navigator class="weui-cell" url="wytx">
+		<view class="weui-cell__hd">
+			<image src="../../../img/distribution/mx.png"></image>
+		</view>
+		<view class="weui-cell__bd">我要提现</view>
+		<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+	</navigator>
+	<navigator class="weui-cell" url="sjzl">
+		<view class="weui-cell__hd">
+			<image src="../../../img/seller/sjzl.png"></image>
+		</view>
+		<view class="weui-cell__bd">门店信息</view>
+		<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+	</navigator>
+</view>
+<view class="weui-cells weui-cells_after-title">
+	<view class="weui-cell">
+		<view class="weui-cell__hd">
+			<image src="../../../img/seller/zdjd.png"></image>
+		</view>
+		<view class="weui-cell__bd">自动接单
+			<text style="color:#999;font-size:22rpx;margin-left:20rpx;">({{jdkgtext}})</text>
+		</view>
+		<view class="weui-cell__ft">
+			<switch bindchange="jdswitchChange" checked="{{jdkg}}"></switch>
+		</view>
+	</view>
+	<view class="weui-cell">
+		<view class="weui-cell__hd">
+			<image src="../../../img/seller/five.png"></image>
+		</view>
+		<view class="weui-cell__bd">语音播报
+			<text style="color:#999;font-size:22rpx;margin-left:20rpx;">({{yykgtext}})</text>
+		</view>
+		<view class="weui-cell__ft">
+			<switch bindchange="yyswitchChange" checked="{{yykg}}"></switch>
+		</view>
+	</view>
+	<navigator class="weui-cell" url="dpsz?szname=1">
+		<view class="weui-cell__hd">
+			<image src="../../../img/seller/dyj.png"></image>
+		</view>
+		<view class="weui-cell__bd" style="flex:1">打印设置</view>
+		<picker bindchange="bindCountryChange" range="{{countries}}" style="flex:2" value="{{countryIndex}}">
+			<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+		</picker>
+	</navigator>
+	<navigator class="weui-cell" url="dpsz?szname=2">
+		<view class="weui-cell__hd">
+			<image src="../../../img/seller/yysjs.png"></image>
+		</view>
+		<view class="weui-cell__bd">营业时间</view>
+		<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+	</navigator>
+	<navigator class="weui-cell" url="yhqgl">
+		<view class="weui-cell__hd">
+			<image src="../../../img/yjy.png"></image>
+		</view>
+		<view class="weui-cell__bd">优惠券管理</view>
+		<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+	</navigator>
+	<navigator class="weui-cell" url="wdyylm">
+		<view class="weui-cell__hd">
+			<image src="../../../img/tabmyfs.png"></image>
+		</view>
+		<view class="weui-cell__bd">我的异业联盟</view>
+		<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+	</navigator>
+	<view class="weui-cell">
+		<view class="weui-cell__hd">
+			<image src="../../../img/yqhy.png"></image>
+		</view>
+		<button open-type="share" class="weui-cell__bds">邀请好友成为异业联盟成员</button>
+		<view class="weui-cell__ft weui-cell__ft_in-access"></view>
+	</view>
+</view>
+<!-- <form bindreset="formReset" bindsubmit="cartaddformSubmit" reportSubmit="true" wx:if="{{user_id==storeinfo.store.admin_id}}">
+    <view class="weui-btn-area">
+        <button class="weui-btn" formType="submit" style="background:#c2c2c2" type="primary">下单提醒按钮</button>
+    </view>
+</form> -->
+<view class="weui-btn-area">
+	<button bindtap="tcdl" class="weui-btn" style="background:{{color}}" type="primary">退出登录</button>
+</view>
